@@ -1,0 +1,49 @@
+.add{
+   margin-top: 5%;
+  text-align: center;
+
+}
+.add-btn{
+  padding: 5px;
+  /* color:lightcoral;
+  background-color: green; */
+}
+table,
+tbody,
+th,
+td,
+tr {
+
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin-left: 10%;
+  margin-top: 40px;
+}
+
+th {
+  font-size: larger;
+  background-color: #DBE4C6;
+}
+
+td,
+th {
+  border: 1px solid #DFD3C3;
+  border-collapse: separate;
+  padding: 21px;
+}
+
+
+tr
+{
+  background-color: blanchedalmond;
+}
+.action button{
+  padding: 5px 5px;
+}
+.edit{
+  background-color: skyblue;
+}
+.del{
+  background-color: red;
+}

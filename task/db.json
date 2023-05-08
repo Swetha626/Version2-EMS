@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "empLogin": [
+    {
+      "userId": "Swethaemp",
+      "password": "Swetha@123"
+    },
+    {
+      "userId": "Baluemp",
+      "password": "Balu@123"
+    }
+  ],
+
+  "profile": {
+    "name": "typicode"
+  }
+}

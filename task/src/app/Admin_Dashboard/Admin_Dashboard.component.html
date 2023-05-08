@@ -1,0 +1,32 @@
+<app-Admin_Header></app-Admin_Header>
+<div class="add">
+  <button class="add-btn">Add Employee</button>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col">Employee ID</th>
+      <th class="col">Employee Name</th>
+      <th class="col">Email ID</th>
+      <th class="col">Mobile No.</th>
+      <th class="col">Salary</th>
+      <th class="col">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>01</td>
+      <td>Arjun</td>
+      <td>arjunsivam@gmail.com</td>
+      <td>9568272273</td>
+      <td>35,000</td>
+      <td class="action">
+        <button mat-raised-button (click)="openDia()">Edit</button>
+        <button class="del">Delect</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

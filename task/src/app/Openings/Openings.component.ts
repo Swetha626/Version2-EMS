@@ -1,0 +1,60 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-Openings',
+  templateUrl: './Openings.component.html',
+  styleUrls: ['./Openings.component.css']
+})
+export class OpeningsComponent implements OnInit {
+
+  constructor(private router:Router) { }
+  headers=["Employee Role", "Skills", "Work Experience", "Salary", "Apply Now"];
+  rows=[
+    {
+      "Role": "Java Developer",
+      "Skills": "Spring",
+      "Experience":"2.5 to 4 years",
+      "Salary":"3 to 4LPA",
+      "Resume":"any"
+    },
+    {
+      "Role": "UI Developer",
+      "Skills": "Html, CSS, JavaScript, Json, React.Js",
+      "Experience":"3 to 8 years",
+      "Salary":"3 to 7LPA",
+      "Resume":"any"
+    },
+    {
+      "Role": "Java Full Stack Developer",
+      "Skills": "Spring Boot, Java, Microservices",
+      "Experience":"2.5 to 8 years",
+      "Salary":"3 to 8LPA",
+      "Resume":"any"
+    },
+    {
+      "Role": "Automation Tester",
+      "Skills": "Java, Automation Testing, Selenium",
+      "Experience":"4 to 9 years",
+      "Salary":"3.5 to 8.5LPA",
+      "Resume":"any"
+    },
+    {
+      "Role": "Technical Lead",
+      "Skills": "Html, CSS, JavaScript, Redux",
+      "Experience":"9 to 12 years",
+      "Salary":"4.5 to 8LPA",
+      "Resume":"any"
+    },
+
+
+  ]
+
+  ngOnInit() {
+  }
+onApply(){
+
+    this.router.navigate(['/Register'])
+
+}
+}

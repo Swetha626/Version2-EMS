@@ -1,0 +1,39 @@
+.dark{
+  background-image: url(../../assets/Images/openings.avif);
+
+}
+.content{
+  width: 950px;
+  height: 550px;
+
+}
+
+        table,tbody,th,td,tr
+       {
+
+
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 20%;
+
+        }
+        th{
+          font-size: larger;
+          background-color:#DBE4C6;
+        }
+         td,
+        th {
+            border: 1px solid #DFD3C3;
+            border-collapse: separate;
+            padding: 21px;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(243, 240, 240, 0.5);
+
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(248, 215, 173, 0.5);
+        }

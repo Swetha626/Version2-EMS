@@ -1,0 +1,25 @@
+<app-Header></app-Header>
+<div class="dark">
+  
+  <div class="content">
+   <table>
+    <tr>
+    <th *ngFor="let column of headers">
+       {{column}}
+    </th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let value of rows">
+        <td>{{value.Role}}</td>
+        <td>{{value.Skills}}</td>
+        <td>{{value.Experience}}</td>
+        <td>{{value.Salary}}</td>
+
+        <td><input type="button" value="Apply" (click)="onApply()"></td>
+      </tr>
+    </tbody>
+   </table>
+   </div>
+</div>
+    <app-Footer></app-Footer>
+
