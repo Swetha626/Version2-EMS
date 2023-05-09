@@ -26,14 +26,14 @@
 
 }
 .dark{
-  background:url(../../assets/Images/c.avif);
+  background:url(../../assets/Images/culture.jpeg);
 
   background-size: cover;
 }
 .col h2 {
   text-align: center;
 
-  color: red;
+  color:#FFF8DE;
 }
 .col p{
   color:black;
