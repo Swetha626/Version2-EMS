@@ -19,21 +19,38 @@ export class LoginComponent{
   })
 submit()
 {
-  this.http.get<any>("http://localhost:3000/empLogin").subscribe(res=>{
-      const users=res.find((a:any)=>{
-        return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
-      });
-      if(users){
-        alert("Login Successfully");
-        this.loginForm.reset();
-        this.router.navigate(['Emp-Page'])
-      }
-      else{
-        alert("User Not Found");
-      }
-    })
-  }
+  this.admin();
+  this.emp();
 }
 
+admin()
+{
+  this.http.get<any>("http://localhost:3000/adminLogin").subscribe(res=>{
+    const admin=res.find((a:any)=>{
+      return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
+    });
+    if(admin){
+      alert("Login Successfully");
+      this.loginForm.reset();
+      this.router.navigate(['Admin-Page'])
+    }
+})
+}
+emp()
 
+  {
+    this.http.get<any>("http://localhost:3000/empLogin").subscribe(res=>{
+        const users=res.find((a:any)=>{
+          return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
+        });
+        if(users){
+          alert("Login Successfully");
+          this.loginForm.reset();
+          this.router.navigate(['Emp-Page'])
+        }
+      })
+    }
+
+
+}
 

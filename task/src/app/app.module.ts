@@ -28,13 +28,14 @@ import { RegisterComponent } from './Register/Register.component';
 import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
 import { Emp_SalaryComponent } from './Emp_Salary/Emp_Salary.component';
+import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
 
 
 
 
 
 @NgModule({
-  declarations: [												
+  declarations: [													
     AppComponent,
       HomeComponent,
       AboutComponent,
@@ -58,7 +59,8 @@ import { Emp_SalaryComponent } from './Emp_Salary/Emp_Salary.component';
       RegisterComponent,
       Emp_LeaveComponent,
       Emp_WorkStatusComponent,
-      Emp_SalaryComponent
+      Emp_SalaryComponent,
+      Admin_NotificationComponent
    ],
   imports: [
     BrowserModule,

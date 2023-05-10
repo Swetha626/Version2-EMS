@@ -16,8 +16,17 @@
       "password": "Balu@123"
     }
   ],
+  "adminLogin": [
+    {
+      "userId": "Swetha",
+      "password": "Swetha@admin"
+    }
+  ],
+"resume":[
+  {
+    
 
-  "profile": {
-    "name": "typicode"
   }
+]
+
 }

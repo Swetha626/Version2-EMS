@@ -15,6 +15,7 @@ import { RegisterComponent } from './Register/Register.component';
 import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
 import { Emp_SalaryComponent } from './Emp_Salary/Emp_Salary.component';
+import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
 
 const routes: Routes = [
   {
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
     path:"Admin-Page",
     component:Admin_HomeComponent
+  },
+  {
+    path:"Admin_Notification",
+    component:Admin_NotificationComponent
   },
 
 
