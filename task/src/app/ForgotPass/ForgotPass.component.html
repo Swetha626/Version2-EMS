@@ -7,7 +7,7 @@
       <div class="underline-title"></div>
     </div>
     <form  class="form" [formGroup]="ForgotForm">
-      <p style="font-size: 70%;">Enter your email and we'll send you a link to reset your password</p>
+      <p style="font-size: 70%;">Enter your email and we'll send you a one time password</p>
       <br>
       <label style="padding-top:13px">Email ID </label>
       <input type="text" class="form-content" formControlName="mailID">
@@ -16,7 +16,7 @@
       <small *ngIf="ForgotForm.controls['mailID'].errors?.['required']">Please enter your mail ID</small>
       <small *ngIf="ForgotForm.controls['mailID'].errors?.['pattern']">Enter valid mail ID</small>
     </div>
-      <button type="submit" class="btn" id="submit-btn" onclick="">Submit</button>
+      <button type="submit" class="btn" id="submit-btn" [disabled]="status" (click)="register()">Submit</button>
       <br>
       <a routerLink="/Login">Back</a>
     </form>

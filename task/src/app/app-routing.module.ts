@@ -16,6 +16,7 @@ import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
 import { Emp_SalaryComponent } from './Emp_Salary/Emp_Salary.component';
 import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
+import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 
 const routes: Routes = [
   {
@@ -72,6 +73,10 @@ const routes: Routes = [
   {
     path:"Emp_salary",
     component:Emp_SalaryComponent
+  },
+  {
+    path:"Emp_cPass",
+    component:Emp_cPassComponent
   },
   {
     path:"Admin-Page",

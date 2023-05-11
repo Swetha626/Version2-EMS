@@ -25,7 +25,7 @@ upload:[,[Validators.required]]
     if(this.regForm.valid)
     {
       this.status=true;
-      alert("Resume Sumitted Successfully"+this.regForm.value.username);
+      alert("Resume Sumitted Successfully");
       this.db();
     }
 
