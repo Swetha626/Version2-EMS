@@ -1,3 +1,52 @@
-<p>
-  Emp_cPass works!
-</p>
+<div class="image">
+  <div class="content">
+    <div class="side">
+      <img src="../../assets/Images/sign.avif" width="250">
+    </div>
+      <div id="card">
+        <div id="card-content">
+          <div id="card-title">
+            <h2>Change Password</h2>
+            <div class="underline-title"></div>
+          </div>
+
+          <form  class="form">
+            <label style="padding-top:13px">Current Password </label>
+            <input type="text" formControlName="currentPassword" class="form-content">
+            <div class="form-border"></div>
+
+
+            <!-- <div *ngIf="loginForm.controls['username'].invalid&&loginForm.controls['username'].touched">
+              <small *ngIf="loginForm.controls['username'].errors?.['required']">Please enter username</small>
+              <small *ngIf="loginForm.controls['username'].errors?.['minlength']">User name should be atleast 3 letters</small>
+              <small *ngIf="loginForm.controls['username'].errors?.['pattern']">First letter should be capital</small>
+
+              <br>
+
+            </div> -->
+            <label style="padding-top:13px">Change Password </label>
+            <input type="text" formControlName="currentPassword" class="form-content">
+            <div class="form-border"></div>
+
+             <!-- <div *ngIf="loginForm.controls['password'].invalid&&loginForm.controls['password'].touched">
+            <small *ngIf="loginForm.controls['password'].errors?.['required']">Please enter Password</small>
+            <small *ngIf="loginForm.controls['password'].errors?.['minlength']">Password should be atleast 6 letters</small>
+            </div> -->
+
+            <label style="padding-top:22px">Confirm Password </label>
+            <input type="password" formControlName="password" class="form-content" required pattern="" >
+            <div class="form-border"></div>
+
+
+
+            <button  class="btn" id="submit-btn">Login</button>
+            <br>
+            <a routerLink="/ForgotPass" id="ForgotP">Forgot Password?</a>
+          </form>
+
+       </div>
+      </div>
+
+  </div>
+
+</div>

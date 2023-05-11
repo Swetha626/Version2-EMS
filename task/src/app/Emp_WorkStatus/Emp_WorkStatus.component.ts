@@ -8,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class Emp_WorkStatusComponent implements OnInit {
 
   constructor() { }
+  status:boolean=false;
+  // sub(){
+  //   if(this.ForgotForm.valid)
+  //   {
+  //     this.status=true;
+  //     alert("Successfully Submitted");
 
+  //   }
+  // }
   ngOnInit() {
   }
 
