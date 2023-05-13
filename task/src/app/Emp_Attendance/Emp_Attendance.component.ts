@@ -9,7 +9,7 @@ export class Emp_AttendanceComponent implements OnInit {
 
   constructor() { }
 
-  
+
   ngOnInit() {
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Open_SerService } from './Open_Ser.service';
 
 @Component({
   selector: 'app-Openings',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class OpeningsComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private service:Open_SerService) { }
   headers=["Employee Role", "Skills", "Work Experience", "Salary", "Apply Now"];
   rows=[
     {
@@ -52,8 +53,8 @@ export class OpeningsComponent implements OnInit {
 
   ngOnInit() {
   }
-onApply(){
-
+onApply(value:any){
+  this.service.applyRole=value.Role;
     this.router.navigate(['/Register'])
 
 }

@@ -1,8 +1,8 @@
 
-<p>
+<!-- <p>
   Admin_Notification works!
   {{getDetails|json}}
-</p>
+</p> -->
 <app-Admin_Header></app-Admin_Header>
 <div class="proName">
   <h2>Job Openings</h2>
@@ -17,16 +17,17 @@
     <td>Mail ID</td>
     <td>Resume</td>
   </tr>
-  <tr class="bottom">
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr class="bottom" *ngFor="let item of getDetails">
+
+    <td>{{item.username}}</td>
+    <td>{{item.mobile}}</td>
+    <td>{{item.mail}}</td>
     <td></td>
   </tr>
-  <tr class="bottom">
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr class="bottom" *ngFor="let item of getDetails">
+    <td>{{item.username}}</td>
+    <td>{{item.mobile}}</td>
+    <td>{{item.mail}}</td>
     <td></td>
   </tr>
 </table>
@@ -41,18 +42,18 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+          <tr class="bottom" *ngFor="let item of getDetails">
+            <td>{{item.username}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.mail}}</td>
+            <td></td>
             </tr>
-            <tr class="bottom">
+            <tr class="bottom" *ngFor="let item of getDetails">
+              <td>{{item.username}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.mail}}</td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+              </tr>
         </table>
 
 
@@ -66,18 +67,18 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+          <tr class="bottom" *ngFor="let item of getDetails">
+            <td>{{item.username}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.mail}}</td>
+            <td></td>
             </tr>
-            <tr class="bottom">
+            <tr class="bottom" *ngFor="let item of getDetails">
+              <td>{{item.username}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.mail}}</td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+              </tr>
         </table>
 
         <div class="moduleName">
@@ -90,18 +91,18 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+          <tr class="bottom" *ngFor="let item of getDetails">
+            <td>{{item.username}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.mail}}</td>
+            <td></td>
             </tr>
-            <tr class="bottom">
+            <tr class="bottom" *ngFor="let item of getDetails">
+              <td>{{item.username}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.mail}}</td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+              </tr>
         </table>
         <div class="moduleName">
           <h4>Role 05:  Technical Lead</h4>
@@ -113,18 +114,18 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+          <tr class="bottom" *ngFor="let item of getDetails">
+            <td>{{item.username}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.mail}}</td>
+            <td></td>
             </tr>
-            <tr class="bottom">
+            <tr class="bottom" *ngFor="let item of getDetails">
+              <td>{{item.username}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.mail}}</td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+              </tr>
         </table>
 
 

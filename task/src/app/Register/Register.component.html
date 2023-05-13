@@ -2,7 +2,7 @@
 <div class="content">
 
   <div class="slide">
-    <h2>Want To Join The Team?</h2>
+    <h2>Want To Join As {{recRole}} ?</h2>
   <br>
   <h1>We're Hiring</h1>
     <img src="../../assets/Images/sign-up.avif" width="250px">
@@ -49,6 +49,9 @@
           <small *ngIf="regForm.controls['mail'].errors?.['pattern']">Enter Valid Mail ID</small>
           </div>
         <br>
+        <!-- <label>Role: {{recRole}} </label>
+        <p>{{recRole}}</p> -->
+        
         <label>Upload Resume</label>
         <input type="file" formControlName="upload"  class="form-content">
         <br>

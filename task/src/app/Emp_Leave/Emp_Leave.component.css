@@ -1,6 +1,7 @@
 .content{
 
-    background-image: linear-gradient(to right,#B1D7B4, #FFF38C);
+    background-image: url(../../assets/Images/background4.avif);
+    background-repeat: no-repeat;
 }
 h2{
   margin-top: 1%;

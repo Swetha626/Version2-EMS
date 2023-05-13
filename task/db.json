@@ -22,11 +22,28 @@
       "password": "Swetha@admin"
     }
   ],
-"resume":[
-  {
-    
-
-  }
-]
-
+  "resume": [
+    {}
+  ],
+  "JavaDeveloper": [
+    {
+      "username": "Karthi A S",
+      "mobile": "9842813031",
+      "mail": "karthi16@gmail.com",
+      "role": "Java Developer",
+      "id": 1
+    }
+  ],
+  "UIDeveloper": [],
+  "JavaFullStackDeveloper": [
+    {
+      "username": "Swetha S",
+      "mobile": "9842413031",
+      "mail": "swethasuresh626@gmail.com",
+      "role": "Java Full Stack Developer",
+      "id": 1
+    }
+  ],
+  "AutomationTester": [],
+  "TechnicalLead": []
 }

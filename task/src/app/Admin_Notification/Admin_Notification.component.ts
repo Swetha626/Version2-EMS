@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotificationService } from './Notification.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-Admin_Notification',
@@ -8,13 +8,12 @@ import { NotificationService } from './Notification.service';
 })
 export class Admin_NotificationComponent implements OnInit {
 
-  constructor(private service:NotificationService) { }
+  constructor(private http:HttpClient) { }
 getDetails:any=""
   ngOnInit() {
-    this.service.getResume().subscribe(data=>{
-      this.getDetails=data
+    this.http.get<any>("http://localhost:3000/JavaDeveloper").subscribe(value=>{
+      this.getDetails=value;
     })
-
   }
 
 }

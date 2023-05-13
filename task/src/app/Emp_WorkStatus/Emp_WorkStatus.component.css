@@ -1,13 +1,23 @@
+*{
+  margin-top: 0%;
+  margin-left: 0%;
+}
+.dark{
+  background-image: linear-gradient(to right,#A0D8B3,#99A98F);
+}
 .proName{
   text-align: center;
-  color: burlywood;
+  color: #FF6969;
   font-size: larger;
 }
 .moduleName{
   text-align: center;
-  color: cornflowerblue;
+  color: #394867;
   font-size: larger;
   font-family: sans-serif;
+}
+.moduleName h5{
+  color: #83764F;
 }
 table,
 th,

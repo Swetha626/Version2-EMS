@@ -20,6 +20,11 @@ import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 
 const routes: Routes = [
   {
+    path:"",
+    component:HomeComponent
+  },
+
+  {
     path:"Home",
     component:HomeComponent
   },
@@ -82,16 +87,16 @@ const routes: Routes = [
     path:"Admin-Page",
     component:Admin_HomeComponent
   },
+  // {
+  //   path:"notification",
+  //   component:Admin_NotificationComponent
+  // },
   {
     path:"Admin_Notification",
     component:Admin_NotificationComponent
   },
 
 
-  {
-    path:"",
-    component:HomeComponent
-  }
 
 
 ];

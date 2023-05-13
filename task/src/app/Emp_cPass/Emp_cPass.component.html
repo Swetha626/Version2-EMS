@@ -10,38 +10,43 @@
             <div class="underline-title"></div>
           </div>
 
-          <form  class="form">
+          <form  class="form" [formGroup]="passForm">
             <label style="padding-top:13px">Current Password </label>
             <input type="text" formControlName="currentPassword" class="form-content">
             <div class="form-border"></div>
 
 
-            <!-- <div *ngIf="loginForm.controls['username'].invalid&&loginForm.controls['username'].touched">
-              <small *ngIf="loginForm.controls['username'].errors?.['required']">Please enter username</small>
-              <small *ngIf="loginForm.controls['username'].errors?.['minlength']">User name should be atleast 3 letters</small>
-              <small *ngIf="loginForm.controls['username'].errors?.['pattern']">First letter should be capital</small>
+            <div *ngIf="passForm.controls['currentPassword'].invalid&&passForm.controls['currentPassword'].touched">
+              <small *ngIf="passForm.controls['currentPassword'].errors?.['required']">current password is required</small>
+              <small *ngIf="passForm.controls['currentPassword'].errors?.['minlength']">User name should be atleast 6 letters</small>
 
               <br>
 
-            </div> -->
+            </div>
             <label style="padding-top:13px">Change Password </label>
-            <input type="text" formControlName="currentPassword" class="form-content">
+            <input type="text" formControlName="changePassword" class="form-content">
             <div class="form-border"></div>
 
-             <!-- <div *ngIf="loginForm.controls['password'].invalid&&loginForm.controls['password'].touched">
-            <small *ngIf="loginForm.controls['password'].errors?.['required']">Please enter Password</small>
-            <small *ngIf="loginForm.controls['password'].errors?.['minlength']">Password should be atleast 6 letters</small>
-            </div> -->
+             <div *ngIf="passForm.controls['changePassword'].invalid&&passForm.controls['changePassword'].touched">
+            <small *ngIf="passForm.controls['changePassword'].errors?.['required']">password is required</small>
+            <small *ngIf="passForm.controls['changePassword'].errors?.['minlength']">Password should be atleast 6 letters</small>
+            </div>
 
             <label style="padding-top:22px">Confirm Password </label>
-            <input type="password" formControlName="password" class="form-content" required pattern="" >
+            <input type="password" formControlName="confirmPassword" class="form-content" >
             <div class="form-border"></div>
 
+            <div *ngIf="passForm.controls['confirmPassword'].invalid&&passForm.controls['confirmPassword'].touched">
+              <small *ngIf="passForm.controls['confirmPassword'].errors?.['required']">confirm password is required</small>
+              <small *ngIf="passForm.controls['confirmPassword'].errors?.['minlength']">Password should be atleast 6 letters</small>
+            </div>
+
+            <div *ngIf="passForm.errors?.['passwordMismatchError']&& passForm.controls['confirmPassword'].touched">
+              <small>Password Mismatch</small>
+            </div>
 
 
-            <button  class="btn" id="submit-btn">Login</button>
-            <br>
-            <a routerLink="/ForgotPass" id="ForgotP">Forgot Password?</a>
+            <button  class="btn" [disabled]="status" (click)="change()" id="submit-btn">Change</button>
           </form>
 
        </div>

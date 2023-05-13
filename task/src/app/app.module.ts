@@ -30,13 +30,14 @@ import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.compone
 import { Emp_SalaryComponent } from './Emp_Salary/Emp_Salary.component';
 import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
 import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
+import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
 
 
 
 
 
 @NgModule({
-  declarations: [														
+  declarations: [															
     AppComponent,
       HomeComponent,
       AboutComponent,
@@ -62,7 +63,8 @@ import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
       Emp_WorkStatusComponent,
       Emp_SalaryComponent,
       Admin_NotificationComponent,
-      Emp_cPassComponent
+      Emp_cPassComponent,
+      Emp_HeaderComponent
    ],
   imports: [
     BrowserModule,
