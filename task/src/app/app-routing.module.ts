@@ -17,6 +17,8 @@ import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.compone
 import { Emp_SalaryComponent } from './Emp_Salary/Emp_Salary.component';
 import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
 import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
+import { Admin_WorkComponent } from './Admin_Work/Admin_Work.component';
+import { Admin_DashboardComponent } from './Admin_Dashboard/Admin_Dashboard.component';
 
 const routes: Routes = [
   {
@@ -95,6 +97,14 @@ const routes: Routes = [
     path:"Admin_Notification",
     component:Admin_NotificationComponent
   },
+  {
+    path:"Admin_Work",
+    component:Admin_WorkComponent
+  },
+  {
+    path:"Admin_Dashboard",
+    component:Admin_DashboardComponent
+  }
 
 
 

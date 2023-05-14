@@ -1,11 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
+  "addEmp": [],
   "empLogin": [
     {
       "userId": "Swethaemp",
@@ -25,25 +19,17 @@
   "resume": [
     {}
   ],
-  "JavaDeveloper": [
-    {
-      "username": "Karthi A S",
-      "mobile": "9842813031",
-      "mail": "karthi16@gmail.com",
-      "role": "Java Developer",
-      "id": 1
-    }
-  ],
-  "UIDeveloper": [],
-  "JavaFullStackDeveloper": [
+  "JavaDeveloper": [],
+  "UIDeveloper": [
     {
       "username": "Swetha S",
       "mobile": "9842413031",
       "mail": "swethasuresh626@gmail.com",
-      "role": "Java Full Stack Developer",
+      "role": "UI Developer",
       "id": 1
     }
   ],
+  "JavaFullStackDeveloper": [],
   "AutomationTester": [],
   "TechnicalLead": []
 }

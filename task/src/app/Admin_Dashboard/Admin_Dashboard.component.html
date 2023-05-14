@@ -1,7 +1,68 @@
-<!-- <app-Admin_Header></app-Admin_Header> -->
+<app-Admin_Dashboard></app-Admin_Dashboard>
 <div class="add">
-  <button class="add-btn">Add Employee</button>
+  <button class="add-btn" (click)="show()">Add Employee</button>
 </div>
+<div class="content"  *ngIf="status">
+
+  <div id="card">
+    <div id="card-content">
+      <div id="card-title">
+        <h2>Employee Details</h2>
+        <div class="underline-title"></div>
+      </div>
+      <form class="form" formControlName="addForm">
+        <label >Full Name </label>
+        <input type="text" style="background-color: darkgray;" formControlName="username" class="form-content" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$">
+        <div class="form-border"></div>
+        <div *ngIf="addForm.controls['username'].invalid&&addForm.controls['username'].touched">
+          <small *ngIf="addForm.controls['username'].errors?.['required']">Please enter username</small>
+          <small *ngIf="addForm.controls['username'].errors?.['minlength']">User name should be atleast 3 letters</small>
+          <small *ngIf="addForm.controls['username'].errors?.['pattern']">First letter should be capital</small>
+          <br>
+        </div>
+
+<br>
+        <label>Email ID</label>
+        <input type="text" style="background-color: darkgray;" formControlName="mail" class="form-content" pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$">
+        <div class="form-border"></div>
+        <div *ngIf="addForm.controls['mail'].invalid&&addForm.controls['mail'].touched">
+          <small *ngIf="addForm.controls['mail'].errors?.['required']">Please enter Mail ID</small>
+          <small *ngIf="addForm.controls['mail'].errors?.['pattern']">Enter Valid Mail ID</small>
+          </div>
+          <br>
+          <label>Mobile Number </label>
+        <input type="text" style="background-color: darkgray;" formControlName="mobile" class="form-content"  pattern="^[6789][0-9]{9}$" >
+        <div class="form-border"></div>
+         <div *ngIf="addForm.controls['mobile'].invalid&&addForm.controls['mobile'].touched">
+        <small *ngIf="addForm.controls['mobile'].errors?.['required']">Please enter mobile number</small>
+        <small *ngIf="addForm.controls['mobile'].errors?.['maxlength']">Password should be 10 letters</small>
+        <small *ngIf="addForm.controls['mobile'].errors?.['pattern']">Enter Valid Mobile Number</small>
+        </div>
+        <br>
+        <!-- <label>Role: {{recRole}} </label>
+        <p>{{recRole}}</p> -->
+
+        <label>Salary</label>
+        <input type="text" style="background-color: darkgray;" formControlName="salary" class="form-content">
+        <div class="form-border"></div>
+        <div *ngIf="addForm.controls['salary'].invalid&&addForm.controls['salary'].touched">
+       <small *ngIf="addForm.controls['salary'].errors?.['required']">Please enter mobile number</small>
+        <br>
+
+        </div>
+        <button  class="btn" id="submit-btn" (click)="postDetails()">Add </button>
+        <br>
+      </form>
+      <div class="side">
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
 <table class="table">
   <thead>
     <tr>
@@ -22,7 +83,7 @@
       <td>9568272273</td>
       <td>35,000</td>
       <td class="action">
-        <button mat-raised-button (click)="openDia()">Edit</button>
+        <button class="edit" style="margin-right: 20px;">Edit</button>
         <button class="del">Delect</button>
       </td>
     </tr>

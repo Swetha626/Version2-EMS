@@ -17,7 +17,7 @@ border: 20px solid transparent;
 border-radius: 5px;
 text-align: center;
 padding: 0px;
-margin-left: 50px;
+margin-left: 15%;
 
 }
 td,
@@ -36,4 +36,16 @@ background-color: rgba(243, 240, 240, 0.5);
 }
 .txt{
 width: 50%;
+}
+h5{
+  margin-left: 20%;
+}
+/* .action button{
+  padding: 5px 10px;
+} */
+.edit{
+  background-color: skyblue;
+}
+.del{
+  background-color: red;
 }

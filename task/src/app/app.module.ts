@@ -23,7 +23,6 @@ import { Admin_leaveComponent } from './Admin_leave/Admin_leave.component';
 import { Admin_DetailsComponent } from './Admin_Details/Admin_Details.component';
 import { Admin_AttendanceComponent } from './Admin_Attendance/Admin_Attendance.component';
 import { Admin_WorkComponent } from './Admin_Work/Admin_Work.component';
-import { Add_EmpComponent } from './Add_Emp/Add_Emp.component';
 import { RegisterComponent } from './Register/Register.component';
 import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
@@ -37,7 +36,7 @@ import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
 
 
 @NgModule({
-  declarations: [															
+  declarations: [
     AppComponent,
       HomeComponent,
       AboutComponent,
@@ -57,7 +56,6 @@ import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
       Admin_DetailsComponent,
       Admin_AttendanceComponent,
       Admin_WorkComponent,
-      Add_EmpComponent,
       RegisterComponent,
       Emp_LeaveComponent,
       Emp_WorkStatusComponent,
