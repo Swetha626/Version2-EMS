@@ -27,14 +27,15 @@ footer{
 .foot .content .box a:hover{
   color:dimgray;
 }
-.foot .content .box a i{
+
+/* .foot .content .box a img{
   padding-right: 1px;
   font-size: 20px;
 }
-.foot .content .box a:hover i{
+.foot .content .box a:hover img{
   padding-right:  15px;
   color: mediumslateblue;
-}
+} */
 .foot .copy{
   padding: 5px;
   padding-left: 20px;

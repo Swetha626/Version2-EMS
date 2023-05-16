@@ -13,7 +13,7 @@
 
           <form  class="form" [formGroup]="loginForm" (ngSubmit)="submit()">
             <label style="padding-top:13px">User Name </label>
-            <input type="text" formControlName="username" class="form-content" pattern="^[A-Z][a-z]*$">
+            <input type="text" formControlName="username" class="form-content" pattern="^[A-Z][a-z]*[0-9]*$">
             <div class="form-border"></div>
 
 

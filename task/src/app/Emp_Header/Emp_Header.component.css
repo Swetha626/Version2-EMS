@@ -2,7 +2,22 @@
   padding: 0%;
   margin: 0%;
 }
+.picture img{
+  display: block;
+  width: 100px; height: 100px;
+  object-fit: cover;
+  border:4px solid #726a95;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
 
+}
+h2{
+  margin-top: 0%;
+  text-align: center;
+  color:crimson;
+  
+}
 .top {
   width: 100%;
   margin: 0;
@@ -27,7 +42,6 @@
   text-decoration: none;
   font-size: larger;
   font-weight: bolder;
-  color: #781C68;
   width: 140px;
   height: 20px;
   padding: 20px;
@@ -112,7 +126,14 @@ label #cancel:hover {
 
 .DropDown li a:hover {
   background-color: #293462;
+  color: white;
+
 }
 .dd {
   margin-left: 250px;
+}
+.active{
+  background-color:#293462;
+  color: white;
+
 }

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup} from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { EmployeeModel } from './Admin_Dashboard.model';
 import { AddEmpService } from '../Add_Emp/AddEmp.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-Admin_Dashboard',
@@ -12,8 +13,9 @@ import { AddEmpService } from '../Add_Emp/AddEmp.service';
 })
 export class Admin_DashboardComponent implements OnInit {
   AddEmp: any;
+  empData !:any;
 
-  constructor(public route:Router,private fb:FormBuilder, private service:AddEmpService) { }
+  constructor(public route:Router,private fb:FormBuilder,private http:HttpClient,private service:AddEmpService) { }
 empObj:EmployeeModel=new EmployeeModel();
   addForm=this.fb.group({
     username:[,[Validators.required,Validators.minLength(3)]],
@@ -29,6 +31,10 @@ show(){
 }
   ngOnInit() {
   }
+
+
+  final:any='';
+
 
 // openDia(){
 //   this.route.navigate(['/Add_Emp']);
@@ -46,4 +52,5 @@ postDetails(){
   },
   )
 }
+
 }

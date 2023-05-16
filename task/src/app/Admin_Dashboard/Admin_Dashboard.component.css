@@ -3,6 +3,14 @@
   text-align: center;
 
 }
+.dark{
+  background-image: linear-gradient(to right,#B5F1CC,#D9ACF5,#FFE5CA);
+  position: fixed;
+  top: 0;
+  margin-left: 16%;
+  height: 100%;
+  width: 90%;
+}
 .add-btn{
   padding: 5px;
   /* color:lightcoral;*/
@@ -16,7 +24,7 @@ tr {
   border-radius: 5px;
   text-align: center;
   padding: 5px;
-  margin-left: 15%;
+  /* margin-left: 17%; */
   margin-top: 40px;
 }
 

@@ -13,7 +13,14 @@
   align-items: center;
 } */
 
-
+.dark{
+  background-image: linear-gradient(to right,#FEA1A1,#1B9C85);
+  position: fixed;
+  top:0%;
+  margin-left: 15%;
+  width: 90%;
+  height: 100%;
+}
 .title{
   text-align: center;
   text-transform: capitalize;
@@ -28,7 +35,8 @@
   display: flex;
   justify-content: center;
   /* flex-wrap: wrap; */
-  padding: 40px 0;
+  padding: 50px 60px;
+  margin-left:0%;
 }
 
 .member{

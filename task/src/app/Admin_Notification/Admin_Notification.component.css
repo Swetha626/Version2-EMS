@@ -3,6 +3,7 @@
   color: burlywood;
   font-size: larger;
 }
+
 .moduleName{
   margin-left: 40%;
   color: cornflowerblue;
@@ -15,7 +16,7 @@ td,
 tr {
 border: 20px solid transparent;
 border-radius: 5px;
-margin-left: 30%;
+margin-left: 25%;
 text-align: center;
 padding: 0px;
 /* margin-left: 50px; */

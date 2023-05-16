@@ -19,6 +19,9 @@ import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notifica
 import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 import { Admin_WorkComponent } from './Admin_Work/Admin_Work.component';
 import { Admin_DashboardComponent } from './Admin_Dashboard/Admin_Dashboard.component';
+import { Admin_leaveComponent } from './Admin_leave/Admin_leave.component';
+import { Admin_DetailsComponent } from './Admin_Details/Admin_Details.component';
+import { Admin_AttendanceComponent } from './Admin_Attendance/Admin_Attendance.component';
 
 const routes: Routes = [
   {
@@ -89,6 +92,10 @@ const routes: Routes = [
     path:"Admin-Page",
     component:Admin_HomeComponent
   },
+  {
+    path:"Admin_Home",
+    component:Admin_HomeComponent
+  },
   // {
   //   path:"notification",
   //   component:Admin_NotificationComponent
@@ -104,9 +111,18 @@ const routes: Routes = [
   {
     path:"Admin_Dashboard",
     component:Admin_DashboardComponent
+  },
+  {
+    path:"Admin_Leave",
+    component:Admin_leaveComponent
+  },
+  {
+    path:"Admin_Details",
+    component:Admin_DetailsComponent
+  },{
+    path:"Admin_Attendance",
+    component:Admin_AttendanceComponent
   }
-
-
 
 
 ];

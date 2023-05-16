@@ -1,4 +1,4 @@
-.proName{
+/* .proName{
   text-align: center;
   color: burlywood;
   font-size: larger;
@@ -8,6 +8,19 @@
   color: cornflowerblue;
   font-size: larger;
   font-family: sans-serif;
+} */
+.dark{
+  background-image: linear-gradient(to right,#C9A7EB,#A4D0A4);
+  position: fixed;
+  top: 0;
+  margin-left: 16%;
+  height: 100%;
+  width: 90%;
+}
+.content h1{
+  margin-left: 35%;
+  /* text-align: center; */
+  color: cornflowerblue;
 }
 table,
 th,
@@ -17,8 +30,8 @@ border: 20px solid transparent;
 border-radius: 5px;
 text-align: center;
 padding: 0px;
-margin-left: 50px;
-
+/* margin-left: 20%; */
+margin-top: 10%;
 }
 td,
 th {

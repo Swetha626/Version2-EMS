@@ -18,6 +18,7 @@
 }
 .moduleName h5{
   color: #83764F;
+  margin-left: 20%;
 }
 table,
 th,
@@ -27,7 +28,7 @@ border: 20px solid transparent;
 border-radius: 5px;
 text-align: center;
 padding: 0px;
-margin-left: 50px;
+margin-left: 18%;
 
 }
 td,

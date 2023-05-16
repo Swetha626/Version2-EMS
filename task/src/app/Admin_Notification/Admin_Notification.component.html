@@ -4,6 +4,7 @@
   {{getDetails|json}}
 </p> -->
 <app-Admin_Header></app-Admin_Header>
+<div class="dark">
 <div class="proName">
   <h2>Job Openings</h2>
 </div>
@@ -17,7 +18,7 @@
     <td>Mail ID</td>
     <td>Resume</td>
   </tr>
-  <tr class="bottom" *ngFor="let item of getDetails">
+  <tr class="bottom" *ngFor="let item of getJava">
 
     <td>{{item.username}}</td>
     <td>{{item.mobile}}</td>
@@ -36,22 +37,17 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom" *ngFor="let item of getDetails">
+          <tr class="bottom" *ngFor="let item of getUI">
             <td>{{item.username}}</td>
             <td>{{item.mobile}}</td>
             <td>{{item.mail}}</td>
             <td></td>
             </tr>
-            <tr class="bottom" *ngFor="let item of getDetails">
-              <td>{{item.username}}</td>
-              <td>{{item.mobile}}</td>
-              <td>{{item.mail}}</td>
-              <td></td>
-              </tr>
+
         </table>
 
 
-        <div class="moduleName">
+         <div class="moduleName">
           <h4>Role 03: Java Full Stack Developer</h4>
         </div>
         <table>
@@ -61,18 +57,12 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom" *ngFor="let item of getDetails">
+          <tr class="bottom" *ngFor="let item of getJFS">
             <td>{{item.username}}</td>
             <td>{{item.mobile}}</td>
             <td>{{item.mail}}</td>
             <td></td>
             </tr>
-            <tr class="bottom" *ngFor="let item of getDetails">
-              <td>{{item.username}}</td>
-              <td>{{item.mobile}}</td>
-              <td>{{item.mail}}</td>
-              <td></td>
-              </tr>
         </table>
 
         <div class="moduleName">
@@ -85,18 +75,13 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom" *ngFor="let item of getDetails">
+          <tr class="bottom" *ngFor="let item of getAT">
             <td>{{item.username}}</td>
             <td>{{item.mobile}}</td>
             <td>{{item.mail}}</td>
             <td></td>
             </tr>
-            <tr class="bottom" *ngFor="let item of getDetails">
-              <td>{{item.username}}</td>
-              <td>{{item.mobile}}</td>
-              <td>{{item.mail}}</td>
-              <td></td>
-              </tr>
+
         </table>
         <div class="moduleName">
           <h4>Role 05:  Technical Lead</h4>
@@ -108,18 +93,13 @@
               <td>Mail ID</td>
               <td>Resume</td>
           </tr>
-          <tr class="bottom" *ngFor="let item of getDetails">
+          <tr class="bottom" *ngFor="let item of getTL">
             <td>{{item.username}}</td>
             <td>{{item.mobile}}</td>
             <td>{{item.mail}}</td>
             <td></td>
             </tr>
-            <tr class="bottom" *ngFor="let item of getDetails">
-              <td>{{item.username}}</td>
-              <td>{{item.mobile}}</td>
-              <td>{{item.mail}}</td>
-              <td></td>
-              </tr>
+
         </table>
 
 
@@ -134,4 +114,4 @@
 
 
 
-
+</div>

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, PatternValidator} from '@angular/forms';
 import { Router } from '@angular/router';
+import { SessionService } from '../Session.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent{
 
-  constructor(private fb:FormBuilder,private http:HttpClient, private router:Router) { }
+  constructor(private fb:FormBuilder,private http:HttpClient, private router:Router, private service:SessionService) { }
   loginForm=this.fb.group({
     username:[,[Validators.required,Validators.minLength(3)]],
     password:[,[Validators.required,Validators.minLength(6)]]
@@ -45,7 +46,8 @@ emp()
         });
         if(users){
           alert("Login Successfully");
-          this.loginForm.reset();
+          this.service.nameID=users;
+          sessionStorage.setItem('nameID', JSON.stringify(users));
           this.router.navigate(['Emp-Page'])
         }
       })

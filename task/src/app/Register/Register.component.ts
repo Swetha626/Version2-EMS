@@ -29,10 +29,9 @@ upload:[,[Validators.required]]
       this.status=true;
       alert("Resume Sumitted Successfully");
       this.db();
+      this.regForm.reset();
+
     }
-
-
-
 
   }
   final:any='';

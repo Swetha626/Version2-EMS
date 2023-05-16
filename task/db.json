@@ -2,12 +2,12 @@
   "addEmp": [],
   "empLogin": [
     {
-      "userId": "Swethaemp",
+      "userId": "Swetha101",
       "password": "Swetha@123"
     },
     {
-      "userId": "Baluemp",
-      "password": "Balu@123"
+      "userId": "Asha102",
+      "password": "Asha@626"
     }
   ],
   "adminLogin": [
@@ -19,17 +19,35 @@
   "resume": [
     {}
   ],
-  "JavaDeveloper": [],
-  "UIDeveloper": [
+  "JavaDeveloper": [
+
     {
       "username": "Swetha S",
       "mobile": "9842413031",
       "mail": "swethasuresh626@gmail.com",
+      "role": "Java Developer",
+      "id": 2
+    }
+  ],
+  "UIDeveloper": [
+    
+    {
+      "username": "Asha G",
+      "mobile": "8654257915",
+      "mail": "ashagokul@gmail.com",
       "role": "UI Developer",
-      "id": 1
+      "id": 2
     }
   ],
   "JavaFullStackDeveloper": [],
   "AutomationTester": [],
-  "TechnicalLead": []
+  "TechnicalLead": [
+    {
+      "username": "Gokulkumar S",
+      "mobile": "9862451037",
+      "mail": "gokulkumar@gmail.com",
+      "role": "Technical Lead",
+      "id": 1
+    }
+  ]
 }

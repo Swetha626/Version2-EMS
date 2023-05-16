@@ -6,7 +6,8 @@
   background-image: url(../../assets/Images/background2.avif);
   width: 100%;
   height: 100%;
-  /* background-repeat: no-repeat; */
+
+   /* background-repeat: no-repeat; */
 }
 h1{
   text-align: center;
@@ -46,4 +47,8 @@ tr:nth-child(odd){
   height: 30px;
   width: 150px;
   text-align: center;
+}
+ul li {
+  list-style: none;
+
 }
