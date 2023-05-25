@@ -1,4 +1,5 @@
 <app-Admin_Header></app-Admin_Header>
+
 <div class="dark">
 <div class="add">
   <button class="add-btn" (click)="show()">Add Employee</button>
@@ -40,10 +41,10 @@
         <small *ngIf="addForm.controls['mobile'].errors?.['pattern']">Enter Valid Mobile Number</small>
         </div>
         <br>
-        <!-- <label>Role: {{recRole}} </label>
+         <!-- <label>Role: {{recRole}} </label>
         <p>{{recRole}}</p> -->
 
-        <label>Salary</label>
+         <label>Salary</label>
         <input type="text" style="background-color: darkgray;" formControlName="salary" class="form-content">
         <div class="form-border"></div>
         <div *ngIf="addForm.controls['salary'].invalid&&addForm.controls['salary'].touched">

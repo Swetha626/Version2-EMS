@@ -3,9 +3,7 @@
   margin-left: 0%;
 }
 .dark{
-  background-image: url(../../assets/Images/background2.avif);
-  width: 100%;
-  height: 100%;
+  background-image: linear-gradient(to right,#B3C890,#73A9AD);
 
    /* background-repeat: no-repeat; */
 }
@@ -52,3 +50,9 @@ ul li {
   list-style: none;
 
 }
+/* ul{
+  height: 5px;
+
+
+} */
+

@@ -3,6 +3,7 @@
   text-align: center;
 
 }
+
 .dark{
   background-image: linear-gradient(to right,#B5F1CC,#D9ACF5,#FFE5CA);
   position: fixed;
@@ -43,7 +44,7 @@ th {
 
 tr
 {
-  background-color: blanchedalmond;
+  background-color: #AAC8A7;
 }
 .action button{
   padding: 5px 5px;

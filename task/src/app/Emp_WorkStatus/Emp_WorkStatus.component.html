@@ -6,6 +6,7 @@
         <div class="moduleName">
             <h4>Module 01: Login Page</h4>
         </div>
+        <form [formGroup]="workForm">
         <table>
             <tr class="top">
                 <td>Task ID</td>
@@ -23,22 +24,35 @@
                 <td>UI Implementation</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
+
+                    <select class="box" formControlName="status">
+                      <option disabled selected>Status</option>
                         <option value="Not Started">Not Started</option>
                         <option value="In-Progress">In-Progress</option>
                         <option value="Completed">Completed</option>
                     </select>
+                    <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                    <small *ngIf="workForm.controls['status'].errors?.['required']"></small>
+                    </div>
                 </td>
                 <td> 5 hr </td>
                 <td>
-                    <input class="txt" type="text" placeholder="Eg: 1h 30m" style="width: 80px;">
+                    <input formControlName="totalTime" class="txt" type="text" placeholder="Eg: 1h 30m" style="width: 80px;">
+                    <div *ngIf="workForm.controls['totalTime'].invalid&&workForm.controls['totalTime'].touched">
+                      <small *ngIf="workForm.controls['totalTime'].errors?.['required']"></small>
+                    </div>
+
                 </td>
 
-                <td>
-                    <textarea></textarea>
+                <td >
+                    <textarea formControlName="text"></textarea>
+                    <div *ngIf="workForm.controls['text'].invalid&&workForm.controls['text'].touched">
+                      <small *ngIf="workForm.controls['text'].errors?.['required']"></small>
+                      </div>
+
                 </td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -46,11 +60,15 @@
                 <td>Backend Implementation</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                   <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>12 hr</td>
                 <td>
@@ -58,7 +76,7 @@
                 </td>
                 <td><textarea></textarea></td>
                 <td>
-                    <input  type="button" type="submit" value="Submit">
+                    <input  type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -66,11 +84,15 @@
                 <td>API Wiring</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>10 hr</td>
                 <td>
@@ -79,7 +101,7 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -87,11 +109,15 @@
                 <td>Table Creation for DB</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>15 hr</td>
                 <td>
@@ -100,7 +126,7 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -108,11 +134,15 @@
                 <td>Analysis</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>20 hr </td>
                 <td>
@@ -121,13 +151,15 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
 
 
         </table>
+    </form>
 
+<!-- <form [formGroup]="workForm">
         <div class="moduleName">
             <h4>Module 02: Employee Page</h4>
             <h5 style="text-align: left;">SubTask 02.1: Attendance Module</h5>
@@ -149,11 +181,15 @@
                 <td>UI Implementation</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>10 hr</td>
                 <td>
@@ -162,7 +198,7 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -170,11 +206,15 @@
                 <td>Backend Implementation</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td> 18 hr</td>
                 <td>
@@ -182,7 +222,7 @@
                 </td>
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -190,11 +230,15 @@
                 <td>API Wiring</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td> 20 hr</td>
                 <td>
@@ -203,7 +247,7 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -211,11 +255,15 @@
                 <td>Table Creation for DB</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>20 hr</td>
                 <td>
@@ -224,7 +272,7 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                    <input type="button" type="submit" value="Submit">
+                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
             </tr>
             <tr class="bottom">
@@ -232,11 +280,15 @@
                 <td>Analysis</td>
                 <td>Swetha</td>
                 <td>
-                    <select class="box">
-                        <option value="Not Started">Not Started</option>
-                        <option value="In-Progress">In-Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                  <select class="box" formControlName="status">
+                    <option disabled selected>Status</option>
+                      <option value="Not Started">Not Started</option>
+                      <option value="In-Progress">In-Progress</option>
+                      <option value="Completed">Completed</option>
+                  </select>
+                  <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
+                  <small *ngIf="workForm.controls['status'].errors?.['required']">Required</small>
+                  </div>
                 </td>
                 <td>32 hr</td>
                 <td>
@@ -245,13 +297,13 @@
 
                 <td><textarea></textarea></td>
                 <td>
-                  <input type="button" type="submit" value="Submit">
+                  <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
               </td>
-                <!-- <td>
-                  <button type="submit" class="btn" id="submit-btn" [disabled]="status" (click)="sub()">Submit</button>
-                </td> -->
+
             </tr>
 
 
           </table>
+          </form>
           </div>
+ -->

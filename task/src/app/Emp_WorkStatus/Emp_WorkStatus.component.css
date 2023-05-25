@@ -48,3 +48,6 @@ background-color: rgba(243, 240, 240, 0.5);
 .txt{
 width: 50%;
 }
+.box small{
+  color: red;
+}
