@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-Admin_leave',
   templateUrl: './Admin_leave.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Admin_leaveComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private http:HttpClient) { }
+getLeave:any="";
   ngOnInit() {
+    this.http.get<any>("http://localhost:3000/leaveForm").subscribe(value=>{
+      this.getLeave=value;
+    });
   }
 
 }

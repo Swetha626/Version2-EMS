@@ -17,33 +17,20 @@
       <td>Reason</td>
       <td>Action</td>
   </tr>
-  <tr class="bottom">
-      <td>Asmitha</td>
-      <td>Balu</td>
-      <td>Testing</td>
-      <td>9845673201</td>
-      <td>29,Dec 2023 </td>
-      <td>31, Dec 2023</td>
-      <td>Sick Leave</td>
+  <tr class="bottom" *ngFor="let item of getLeave">
+      <td>{{item.username}}</td>
+      <td>{{item.tlname}}</td>
+      <td>{{item.deptname}}</td>
+      <td>{{item.mobile}}</td>
+      <td>{{item.leaveDate}}</td>
+      <td>{{item.returnDate}}</td>
+      <td>{{item.reason}}</td>
       <td>
         <button mat-raised-button>Approve</button>
         <br><br>
         <button class="del">Cancel</button>
       </td>
-      <tr class="bottom">
-        <td>Ramesh</td>
-        <td>Geetha</td>
-        <td>Developer</td>
-        <td>8664584397</td>
-        <td>06,June 2023 </td>
-        <td>07,June 2023</td>
-        <td>Doctor Appointment</td>
-        <td>
-          <button>Approve</button>
-          <br>
-          <br>
-          <button >Cancel</button>
-        </td>
+
 
   <!-- </tr>
         <td>

@@ -47,6 +47,11 @@
           margin-top:0%;
         }
         .dark img{
-          margin-top: 50%;
+          margin-top: 0%;
           margin-left: 25%;
         }
+.dark h3{
+  text-align: center;
+  margin-top:20%;
+  color: #116D6E;
+}

@@ -1,5 +1,20 @@
 {
-  "addEmp": [],
+  "addEmp": [
+    {
+      "username": "Swetha S",
+      "mail": "swethasuresh626@gmail.com",
+      "mobile": "9842413031",
+      "salary": "25000",
+      "id": 1
+    },
+    {
+      "username": "Asha G",
+      "mail": "ashagokul@gmail.com",
+      "mobile": "8987456381",
+      "salary": "30000",
+      "id": 2
+    }
+  ],
   "empLogin": [
     {
       "userId": "Swetha101",
@@ -20,7 +35,6 @@
     {}
   ],
   "JavaDeveloper": [
-
     {
       "username": "Swetha S",
       "mobile": "9842413031",
@@ -30,7 +44,6 @@
     }
   ],
   "UIDeveloper": [
-    
     {
       "username": "Asha G",
       "mobile": "8654257915",
@@ -48,6 +61,28 @@
       "mail": "gokulkumar@gmail.com",
       "role": "Technical Lead",
       "id": 1
+    }
+  ],
+  "leaveForm": [
+    {
+      "username": "Swetha",
+      "tlname": "Naveen",
+      "deptname": "Testing",
+      "mobile": "9842413031",
+      "leaveDate": "2023-06-06",
+      "returnDate": "2023-06-08",
+      "reason": "Function",
+      "id": 1
+    },
+    {
+      "username": "Swetha",
+      "tlname": "Naveen",
+      "deptname": "Testing",
+      "mobile": "9842413031",
+      "leaveDate": "2023-05-22",
+      "returnDate": "2023-05-24",
+      "reason": "family Problem",
+      "id": 2
     }
   ]
 }

@@ -77,7 +77,7 @@ h2{
 ::placeholder{
   text-align: center;
 }
-.Error{
+small{
   margin-left: 250px;
   color: red;
 }

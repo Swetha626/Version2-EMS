@@ -4,11 +4,11 @@
     <form class="form" [formGroup]="leaveForm">
         <label>Employee Name</label>
         <input type="text" formControlName="username" placeholder="enter full name" id="username" style="text-align: center;" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$">
-        <div *ngIf="leaveForm.controls['username'].invalid&&leaveForm.controls['username'].touched">
-          <small class="Error" *ngIf="leaveForm.controls['username'].errors?.['required']">Please enter username</small>
+        <div *ngIf="leaveForm.controls['username'].dirty || leaveForm.controls['username'].touched">
+          <small *ngIf="leaveForm.controls['username'].errors?.['touched']">Please enter username</small>
+          <small *ngIf="leaveForm.controls['username'].errors?.['required']">Please enter username</small>
           <small *ngIf="leaveForm.controls['username'].errors?.['minlength']">User name should be atleast 3 letters</small>
           <small *ngIf="leaveForm.controls['username'].errors?.['pattern']">First letter should be capital</small>
-
         </div>
 
         <br>
@@ -34,47 +34,45 @@
         <input type="text"  formControlName="mobile" placeholder="enter mobile number" id="usernum" style="text-align: center;"  pattern="^[6789][0-9]{9}$">
         <div *ngIf="leaveForm.controls['mobile'].invalid&&leaveForm.controls['mobile'].touched">
           <small *ngIf="leaveForm.controls['mobile'].errors?.['required']">Please enter mobile number</small>
-          <!-- <small *ngIf="regForm.controls['mobile'].errors?.['maxlength']">Password should be 10 letters</small> -->
           <small *ngIf="leaveForm.controls['mobile'].errors?.['pattern']">Enter Valid Mobile Number</small>
           </div>
         <br>
         <label>Leave Date</label>
-        <input formControlName type="date" id="startDate" style="text-align: center;" >
+        <input formControlName="leaveDate" type="date" id="startDate" style="text-align: center;" >
         <br>
         <label>Return Date</label>
-        <input type="date" id="endDate" style="text-align: center;">
+        <input formControlName="returnDate" type="date" id="endDate" style="text-align: center;">
         <br>
-        <label>Reason for Leave</label><br>
+         <label>Reason for Leave</label><br>
         <div class="reasons">
-        <div class="left" >
-            <input formControlName="reason" type="radio" name="rea" id="reason">
+        <div class="left">
+            <input formControlName="reason" type="radio" name="reason" id="reason" value="Vacation">
             <label>Vacation</label><br>
-            <input formControlName="reason" type="radio" name="rea" id="reason">
+            <input formControlName="reason" type="radio" name="reason" id="reason" value="Sick">
             <label>Sick</label><br>
-            <!-- <input type="radio" name="option" (click)="selectOption(1)"> Option 1 -->
+
 
             <div class="other" (change)="others()">
-              <input  type="radio" formControlName="reason"  name="rea" id="reason1">
+              <input  type="radio" formControlName="reason"  name="reason" id="reason1">
               <label>Others</label>
-              <input type="text"  *ngIf="status" placeholder="reason for leave">
+              <input type="text" formControlName="reason" name="reason" *ngIf="status" placeholder="reason for leave">
             </div>
 
-            <!-- <input type="text" placeholder="reason for leave" id="content" style="display:none;" > -->
-            <!-- <input *ngIf="selectedOption === 1" type="text" [(ngModel)]="textBoxValue"> -->
+
         </div>
-        <div class="right" >
-            <input formControlName="reason" type="radio" name="rea" id="reason">
+        <div class="right">
+            <input formControlName="reason" type="radio" name="reason" id="reason" value="Doctor Appointment">
             <label>Doctor Appointment</label><br>
-            <input formControlName="reason" type="radio" name="rea" id="reason">
+            <input formControlName="reason" type="radio" name="reason" id="reason" value="Function">
             <label>Function</label><br>
         </div>
 
         </div>
+        <br>
 
 
     <div class="btn">
-      <button type="submit"[disabled]="leaveForm.invalid">Submit</button>
-      <!-- <input type="button" type="submit" value="Submit" [disabled]="leaveForm.invalid"> -->
+      <button type="submit"[disabled]="leaveForm.invalid" (click)="sub()">Submit</button>
     </div>
 
 
