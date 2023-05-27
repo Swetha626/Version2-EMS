@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// import {MatToolbarModule} from '@angular/material/toolbar';
-// import {MatIconModule} from '@angular/material/icon';
-// import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule}from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/Home.component';
@@ -32,6 +35,7 @@ import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notifica
 import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WorkFormComponent } from './work-form/work-form.component';
 
 
 
@@ -63,7 +67,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       Emp_WorkStatusComponent,
       Admin_NotificationComponent,
       Emp_cPassComponent,
-      Emp_HeaderComponent
+      Emp_HeaderComponent,
+      WorkFormComponent
 
 
    ],
@@ -73,9 +78,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // MatToolbarModule,
-    // MatIconModule,
-    // MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],

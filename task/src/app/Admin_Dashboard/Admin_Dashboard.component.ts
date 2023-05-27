@@ -67,14 +67,12 @@ getDetails:any="";
 
   // }
 // delEmp(item:any){
-//   this.delEmp(item.id).subscribe(data=>{
+//   this.delEmp(item.id).subscribe(()=>{
 //     alert("Employee Deleted");
 //   })
-// }
 
-// openDia(){
-//   this.route.navigate(['/Add_Emp']);
-// }
+
+
 // postDetails(){
 //   this.empObj.username=this.addForm.value.username;
 //   this.empObj.mail=this.addForm.value.mail;

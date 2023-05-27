@@ -5,20 +5,24 @@
 <div class="moduleName">
   <h4>Module 01: Login Page</h4>
 </div> -->
+<div class="dark">
+  <div class="add">
+    <button mat-raised-button color="primary" style="margin-left: 70%; margin-top: 1%" (click)="openForm()">Create Task</button>
+  </div>
 <table>
   <tr class="top">
-      <td>Task ID</td>
-      <td>Task Name</td>
-      <td>Owner</td>
+      <!-- <td>Task ID</td> -->
+      <td style="width: 200px;">Task Name</td>
+      <td style="width: 80px;">Owner</td>
       <td>Status</td>
-      <td style="width: 10%;">Estimated Hours</td>
-      <td style="width: 10%;">Total Spent Hours</td>
-      <td>Module Status</td>
+      <td style="width: 80px;">Estimated Hours</td>
+      <td style="width: 80px">Total Spent Hours</td>
+      <td style="width: 150px;">Module Status</td>
       <td>Update Status</td>
 
   </tr>
   <tr class="bottom">
-      <td>EMS M1-001</td>
+      <!-- <td>EMS M1-001</td> -->
       <td>UI Implementation</td>
       <td>Swetha</td>
       <td>
@@ -27,15 +31,13 @@
       <td> 5 hr </td>
       <td></td>
       <td></td>
-      <td class="action">
-        <button class="edit">Edit</button>
-        <br>
-        <br>
-        <button class="del">Delect</button>
+      <td>
+        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
   </tr>
   <tr class="bottom">
-      <td>EMS M1-002</td>
+      <!-- <td>EMS M1-002</td> -->
       <td>Backend Implementation</td>
       <td>Swetha</td>
       <td> </td>
@@ -43,11 +45,12 @@
       <td></td>
       <td></td>
       <td>
-          <input  type="button" type="submit" value="Submit">
+        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
   </tr>
   <tr class="bottom">
-      <td>EMS M1-003</td>
+      <!-- <td>EMS M1-003</td> -->
       <td>API Wiring</td>
       <td>Swetha</td>
       <td></td>
@@ -55,11 +58,12 @@
       <td></td>
       <td></td>
       <td>
-          <input type="button" type="submit" value="Submit">
+        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
   </tr>
   <tr class="bottom">
-      <td>EMS M1-004</td>
+      <!-- <td>EMS M1-004</td> -->
       <td>Table Creation for DB</td>
       <td>Swetha</td>
       <td></td>
@@ -67,11 +71,12 @@
       <td></td>
       <td></td>
       <td>
-          <input type="button" type="submit" value="Submit">
+        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
   </tr>
   <tr class="bottom">
-      <td>EMS M1-005</td>
+      <!-- <td>EMS M1-005</td> -->
       <td>Analysis</td>
       <td>Swetha</td>
       <td></td>
@@ -79,92 +84,14 @@
      <td></td>
       <td></td>
       <td>
-          <input type="button" type="submit" value="Submit">
+        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
   </tr>
 
 
 </table>
 
-<div class="moduleName">
-  <h4>Module 02: Employee Page</h4>
-  <h5 style="text-align: left;">SubTask 02.1: Attendance Module</h5>
+
+
 </div>
-<table>
-  <tr class="top">
-      <td>Task ID</td>
-      <td>Task Name</td>
-      <td>Owner</td>
-      <td>Status</td>
-      <td style="width: 10%;">Estimated Hours</td>
-      <td style="width: 10%;">Total Spent Hours</td>
-      <td>Module Status</td>
-      <td>Update Status</td>
-  </tr>
-  <tr class="bottom">
-      <td>EMS M2-2.1-001</td>
-      <td>UI Implementation</td>
-      <td>Swetha</td>
-      <td></td>
-      <td>10 hr</td>
-     <td></td>
-      <td></td>
-      <td>
-          <input type="button" type="submit" value="Submit">
-      </td>
-  </tr>
-  <tr class="bottom">
-      <td>EMS M2-2.1-002</td>
-      <td>Backend Implementation</td>
-      <td>Swetha</td>
-      <td></td>
-      <td> 18 hr</td>
-      <td></td>
-      <td></td>
-
-      <td>
-          <input type="button" type="submit" value="Submit">
-      </td>
-  </tr>
-  <tr class="bottom">
-      <td>EMS M2-2.1-003</td>
-      <td>API Wiring</td>
-      <td>Swetha</td>
-      <td></td>
-      <td> 20 hr</td>
-
-      <td></td>
-      <td></td>
-      <td>
-          <input type="button" type="submit" value="Submit">
-      </td>
-  </tr>
-  <tr class="bottom">
-      <td>EMS M2-2.1-004</td>
-      <td>Table Creation for DB</td>
-      <td>Swetha</td>
-      <td></td>
-      <td>20 hr</td>
-     <td></td>
-
-      <td></td>
-      <td>
-          <input type="button" type="submit" value="Submit">
-      </td>
-  </tr>
-  <tr class="bottom">
-      <td>EMS M2-2.1-005</td>
-      <td>Analysis</td>
-      <td>Swetha</td>
-      <td></td>
-      <td>32 hr</td>
-
-      <td></td>
-      <td></td>
-      <!-- <td>
-        <button type="submit" class="btn" id="submit-btn" [disabled]="status" (click)="sub()">Submit</button>
-      </td> -->
-  </tr>
-
-
-</table>

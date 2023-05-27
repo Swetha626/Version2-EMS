@@ -1,9 +1,21 @@
-.proName{
+.dark{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+   top: 0;
+   margin-left: 200px;
+
+}
+.add{
+
+
+}
+ .proName{
   text-align: center;
   color: burlywood;
   font-size: larger;
-  background-color: black;
-  margin-top: 0%;
+
+
 }
 .moduleName{
   margin-left: 40%;
@@ -20,7 +32,7 @@ border-radius: 5px;
 margin-left: 30%;
 text-align: center;
 padding: 0px;
-/* margin-left: 50px; */
+ margin-left: 50px;
 
 }
 td,
@@ -37,4 +49,3 @@ background-color:rgba(248, 215, 173, 0.5) ;
 .bottom {
 background-color: rgba(243, 240, 240, 0.5);
 }
-

@@ -2,20 +2,13 @@
 
 <div class="dark">
 <div class="add">
-  <button class="add-btn" (click)="show()">Add Employee</button>
+  <button mat-raised-button color="primary" (click)="show()">Add Employee</button>
 </div>
 <div class="content"  *ngIf="status">
 
 
 
   <div id="card">
-    <div class="dd"> <input type="checkbox" id="check">
-
-    <label for="check">
-      <i class="fas fa-times" id="cancel"></i>
-
-  </label>
-  </div>
     <div id="card-content">
       <div id="card-title">
         <h2>Employee Details</h2>
@@ -59,9 +52,14 @@
         <br>
 
         </div>
-        <button  class="btn" id="submit-btn"[disabled]="addForm.invalid" (click)="addDetails()">Add </button>
+        <br>
+        <div class="mat-dialog-action">
 
 
+        <button mat-raised-button color="accent" style="width: 50px;" [disabled]="addForm.invalid" (click)="addDetails()">Add</button>
+        <button mat-raised-button color="warn" style="width: 50px; margin-left: 150px; margin-top: 0px;" >Close</button>
+
+</div>
       </form>
       <div class="side">
 
@@ -93,8 +91,9 @@
       <td>{{item.mobile}}</td>
       <td>{{item.salary}}</td>
       <td class="action">
-        <button class="edit" style="margin-right: 20px;" (click)="show()">Edit</button>
-        <button class="del">Delect</button>
+        <button mat-icon-button color="primary" (click)="show()"> <mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon>
+        </button>
       </td>
     </tr>
   </tbody>

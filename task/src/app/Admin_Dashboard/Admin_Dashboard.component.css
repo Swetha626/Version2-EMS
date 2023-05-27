@@ -109,7 +109,7 @@ padding-bottom: 23px;
 padding-top: 13px;
 text-align: center;
 }
-
+/* 
 #submit-btn {
 background: -webkit-linear-gradient(right, #4d30f3, #1916f7);
 border: none;
@@ -123,23 +123,9 @@ margin-left: 20% 50%;
 margin-top: 10px;
 transition: 0.25s;
 width: 100px;
-}
-#check {
-  display: none;
-}
-label #cancel {
-  position: absolute;
-  cursor: pointer;
-}
+} */
 
 
-label #cancel {
-  z-index: 111;
-  left: 500px;
-  top: 20%;
-  font-size: 150%;
-  color: #182747;
-}
 
 
 
