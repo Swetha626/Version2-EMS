@@ -12,7 +12,7 @@ import { AddEmpService } from '../Add_Emp/AddEmp.service';
   styleUrls: ['./Admin_Dashboard.component.css']
 })
 export class Admin_DashboardComponent implements OnInit {
-  [x: string]: any;
+  // [x: string]: any;
   // AddEmp: any;
   // empData !:any;
 
@@ -27,8 +27,9 @@ salary:[,[Validators.required]]
 
 
 status:boolean=false;
-show(){
+show(item:any){
   this.status=!this.status;
+  this.editEmp(item);
 
 }
 addDetails(){
@@ -59,18 +60,23 @@ getDetails:any="";
     })
 
   }
-  // editEmp(item:any){
-  //   this.formValue.controls['username'].setValue(item.username);
-  //   this['formValue'].controls['mail'].setValue(item.mail);
-  //   this['formValue'].controls['mobile'].setValue(item.mobile);
-  //   this['formValue'].controls['salary'].setValue(item.salary);
+  editEmp(item:any){
+    this.addForm.controls['username'].setValue(item.username);
+    this.addForm.controls['mail'].setValue(item.mail);
+    this.addForm.controls['mobile'].setValue(item.mobile);
+    this.addForm.controls['salary'].setValue(item.salary);
 
-  // }
+  }
 // delEmp(item:any){
 //   this.delEmp(item.id).subscribe(()=>{
 //     alert("Employee Deleted");
 //   })
-
+delEmp(item:any){
+  this.http.delete("http://localhost:3000/addEmp/"+item).subscribe(data=>{
+alert("Deleted");
+this.ngOnInit();
+  })
+}
 
 
 // postDetails(){

@@ -2,9 +2,9 @@
 
 <div class="dark">
 <div class="add">
-  <button mat-raised-button color="primary" (click)="show()">Add Employee</button>
+  <button mat-raised-button color="primary" >Add Employee</button>
 </div>
-<div class="content"  *ngIf="status">
+<div class="content" *ngIf="status">
 
 
 
@@ -91,8 +91,8 @@
       <td>{{item.mobile}}</td>
       <td>{{item.salary}}</td>
       <td class="action">
-        <button mat-icon-button color="primary" (click)="show()"> <mat-icon>edit</mat-icon></button>
-        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon>
+        <button mat-icon-button color="primary" (click)="show(item)"> <mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" (click)="delEmp(item.id)"><mat-icon>delete</mat-icon>
         </button>
       </td>
     </tr>
