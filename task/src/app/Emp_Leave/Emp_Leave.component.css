@@ -1,6 +1,6 @@
 .content{
 
-    background-image:linear-gradient(to right,#5D9C59,#AEC2B6)
+    background-image:linear-gradient(to right,#B3C890,#73A9AD)
 
 }
 h2{
@@ -84,4 +84,7 @@ small{
 a{
   margin-left: 10%;
   margin-top: 2%;
+}
+span{
+  font-size: 20px;
 }

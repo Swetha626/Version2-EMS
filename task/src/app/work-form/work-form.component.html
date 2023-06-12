@@ -6,7 +6,7 @@
   <form [formGroup]="taskForm">
   <mat-form-field appearance="outline">
     <mat-label>Task Name</mat-label>
-    <input matInput formControlName="taskname" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$">
+    <input matInput formControlName="taskname" pattern="^[A-Z][a-z]*[' ']*[A-Z][a-z]*[' ']*[A-Z]*$">
   </mat-form-field>
     <div *ngIf="taskForm.controls['taskname'].invalid&&taskForm.controls['taskname'].touched">
       <small *ngIf="taskForm.controls['taskname'].errors?.['required']">Please enter Taskname</small>
@@ -37,6 +37,9 @@
 </div>
 
 <div class="mat-dialog-action">
-  <button mat-raised-button color="warn">Close</button>
-  <button mat-raised-button color="primary" [disabled]="taskForm.invalid" (click)="task()">Assign</button>
+<a routerLink="/Admin_Work">
+  <button mat-raised-button color="warn" >Close</button></a>
+  <button mat-raised-button  [disabled]="taskForm.invalid"color="primmary" (click)="task()">Assign</button>
 </div>
+
+

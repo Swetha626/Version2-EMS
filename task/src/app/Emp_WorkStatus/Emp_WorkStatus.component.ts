@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -9,21 +10,41 @@ import { Validators } from '@angular/forms';
 })
 export class Emp_WorkStatusComponent implements OnInit {
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private http:HttpClient) { }
+
+  getTask:any='';
+
+  ngOnInit() {
+    this.http.get<any>("http://localhost:3000/WorkForm").subscribe(data1=>{
+      this.getTask=data1;
+    })
+  }
   workForm=this.fb.group({
     status:[,[Validators.required]],
+    totalTime:[,[Validators.required]],
     text:[,[Validators.required]],
-    totalTime:[,[Validators.required]]
   })
 
-  send()
+  send(item:any)
   {
     if(this.workForm.valid)
     {
-      
       alert("Work Status Submitted successfully");
+      this.db();
 
     }
+  }
+
+  db(){
+    var body={
+      status:this.workForm.value.status,
+      totalTime:this.workForm.value.totalTime,
+      text:this.workForm.value.text
+
+    }
+    this.http.post<any>("http://localhost:3000/EmpStatus",body).subscribe(data=>{
+
+    })
   }
   // sub(){
   //   if(this.ForgotForm.valid)
@@ -33,7 +54,5 @@ export class Emp_WorkStatusComponent implements OnInit {
 
   //   }
   // }
-  ngOnInit() {
-  }
 
 }

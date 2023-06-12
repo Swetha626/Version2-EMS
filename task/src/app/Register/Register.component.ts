@@ -65,7 +65,6 @@ db(){
   // })
 this.http.post<any>("http://localhost:3000/"+this.final,body).subscribe(data=>{
 
-
 })
 }
   ngOnInit() {

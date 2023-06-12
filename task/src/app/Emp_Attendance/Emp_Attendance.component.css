@@ -48,6 +48,7 @@ tr:nth-child(odd){
 }
 ul li {
   list-style: none;
+  display: block;
 
 }
 /* ul{

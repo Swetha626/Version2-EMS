@@ -1,16 +1,18 @@
 <app-Emp_Header></app-Emp_Header>
 <div class="content">
     <h2>Apply For Leave</h2>
+    <div class="add">
+      <button mat-raised-button color="primary" style="margin-left: 70%; margin-top: 1%" (click)="view()">Leave Status</button>
+    </div>
     <form class="form" [formGroup]="leaveForm">
-        <label>Employee Name</label>
-        <input type="text" formControlName="username" placeholder="enter full name" id="username" style="text-align: center;" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$">
-        <div *ngIf="leaveForm.controls['username'].dirty || leaveForm.controls['username'].touched">
+        <label>Employee Name</label> <span>{{loginID.userName}}</span>
+        <!-- <input type="text" formControlName="username" value="{{loginID.userName}}" id="username" style="text-align: center;" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$"> -->
+        <!-- <div *ngIf="leaveForm.controls['username'].dirty || leaveForm.controls['username'].touched">
           <small *ngIf="leaveForm.controls['username'].errors?.['touched']">Please enter username</small>
           <small *ngIf="leaveForm.controls['username'].errors?.['required']">Please enter username</small>
           <small *ngIf="leaveForm.controls['username'].errors?.['minlength']">User name should be atleast 3 letters</small>
           <small *ngIf="leaveForm.controls['username'].errors?.['pattern']">First letter should be capital</small>
-        </div>
-
+        </div> -->
         <br>
         <label>Team Leader Name</label>
         <input type="text" formControlName="tlname" placeholder="enter your TL name" id="leadname" style="text-align: center;">
@@ -20,6 +22,7 @@
           <small *ngIf="leaveForm.controls['tlname'].errors?.['pattern']">First letter should be capital</small>
           <br>
         </div>
+
         <br>
         <label>Department</label>
         <input type="text" formControlName="deptname" placeholder="enter dept" id="deptname" style="text-align: center;" onkeyup="deptValid()">
@@ -51,7 +54,6 @@
             <input formControlName="reason" type="radio" name="reason" id="reason" value="Sick">
             <label>Sick</label><br>
 
-
             <div class="other" (change)="others()">
               <input  type="radio" formControlName="reason"  name="reason" id="reason1">
               <label>Others</label>
@@ -66,15 +68,13 @@
             <input formControlName="reason" type="radio" name="reason" id="reason" value="Function">
             <label>Function</label><br>
         </div>
-
         </div>
         <br>
-
-
     <div class="btn">
       <button type="submit"[disabled]="leaveForm.invalid" (click)="sub()">Submit</button>
     </div>
-
+    <h2 *ngIf="show">{{leaveStatus.Status}}</h2>
 
     </form>
     </div>
+

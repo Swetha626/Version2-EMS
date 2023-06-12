@@ -11,20 +11,21 @@
     <tr>
         <td>01 Oct,2023</td>
         <td>
-          <ul>
-            <li><input type="radio" name="post" id="opt">
-              <label>Present</label></li>
-              <li><input type="radio" name="post" id="opt">
-                <label>Excused</label><br></li>
-                <li> <input type="radio" name="post" id="opt">
-                  <label>Leave</label></li>
-                  <li> <input type="radio" name="post" id="opt">
-                    <label>Work From Home</label></li>
+          <ul style="text-align: left;">
+            <li> <input type="radio">Present</li>
+            <li> <input type="radio">Excused</li>
+            <li> <input type="radio">Leave</li>
           </ul>
-
-
-
-
+          <!-- <ul>
+            <li *ngIf="hide"><input type="radio" name="post" id="opt">
+              <span>Present</span></li>
+              <li><input type="radio" name="post" id="opt">
+                <span>Excused</span></li>
+                <li> <input type="radio" name="post" id="opt">
+                  <span>Leave</span></li>
+                  <li> <input type="radio" name="post" id="opt">
+                    <span>Work From Home</span></li>
+          </ul> -->
         </td>
         <td>
           <button type="submit">Submit</button>

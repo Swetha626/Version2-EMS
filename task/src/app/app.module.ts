@@ -6,6 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule}from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/Home.component';
@@ -36,6 +37,7 @@ import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorkFormComponent } from './work-form/work-form.component';
+import { AttendanceFormComponent } from './attendanceForm/attendanceForm.component';
 
 
 
@@ -68,9 +70,8 @@ import { WorkFormComponent } from './work-form/work-form.component';
       Admin_NotificationComponent,
       Emp_cPassComponent,
       Emp_HeaderComponent,
-      WorkFormComponent
-
-
+      WorkFormComponent,
+      AttendanceFormComponent
    ],
   imports: [
     BrowserModule,
@@ -83,7 +84,7 @@ import { WorkFormComponent } from './work-form/work-form.component';
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,MatRadioModule
 
   ],
   providers: [],

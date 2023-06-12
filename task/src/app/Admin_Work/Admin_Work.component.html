@@ -21,14 +21,25 @@
       <td>Update Status</td>
 
   </tr>
-  <tr class="bottom">
+  <tr class="bottom" *ngFor="let item of getWork1,let element of getWork2">
       <!-- <td>EMS M1-001</td> -->
-      <td>UI Implementation</td>
-      <td>Swetha</td>
+      <td>{{item.taskname}}</td>
+      <td>{{item.owner}}</td>
+      <td>{{element.status}}</td>
+      <td>{{item.time}}</td>
+      <td>{{element.totalTime}}</td>
+      <td>{{element.text}}</td>
       <td>
-
+        <button mat-icon-button color="primary" (click)="editTask(item)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
-      <td> 5 hr </td>
+  </tr>
+  <!-- <tr class="bottom" *ngFor="let item of getWork">
+      <td>EMS M1-002</td>
+      <td>{{item.taskname}}</td>
+      <td>{{item.owner}}</td>
+      <td></td>
+      <td>{{item.time}}</td>
       <td></td>
       <td></td>
       <td>
@@ -37,61 +48,19 @@
       </td>
   </tr>
   <tr class="bottom">
-      <!-- <td>EMS M1-002</td> -->
-      <td>Backend Implementation</td>
-      <td>Swetha</td>
-      <td> </td>
-      <td>12 hr</td>
+      <td>EMS M1-003</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td></td>
       <td></td>
       <td>
         <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
         <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
-  </tr>
-  <tr class="bottom">
-      <!-- <td>EMS M1-003</td> -->
-      <td>API Wiring</td>
-      <td>Swetha</td>
-      <td></td>
-      <td>10 hr</td>
-      <td></td>
-      <td></td>
-      <td>
-        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
-      </td>
-  </tr>
-  <tr class="bottom">
-      <!-- <td>EMS M1-004</td> -->
-      <td>Table Creation for DB</td>
-      <td>Swetha</td>
-      <td></td>
-      <td>15 hr</td>
-      <td></td>
-      <td></td>
-      <td>
-        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
-      </td>
-  </tr>
-  <tr class="bottom">
-      <!-- <td>EMS M1-005</td> -->
-      <td>Analysis</td>
-      <td>Swetha</td>
-      <td></td>
-      <td>20 hr </td>
-     <td></td>
-      <td></td>
-      <td>
-        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
-      </td>
-  </tr>
-
+  </tr> -->
 
 </table>
-
-
-
 </div>
+

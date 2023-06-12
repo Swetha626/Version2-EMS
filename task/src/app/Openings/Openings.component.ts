@@ -26,13 +26,7 @@ export class OpeningsComponent implements OnInit {
       "Salary":"3 to 7LPA",
       "Resume":"any"
     },
-    {
-      "Role": "Java Full Stack Developer",
-      "Skills": "Spring Boot, Java, Microservices",
-      "Experience":"2.5 to 8 years",
-      "Salary":"3 to 8LPA",
-      "Resume":"any"
-    },
+
     {
       "Role": "Automation Tester",
       "Skills": "Java, Automation Testing, Selenium",
@@ -40,15 +34,6 @@ export class OpeningsComponent implements OnInit {
       "Salary":"3.5 to 8.5LPA",
       "Resume":"any"
     },
-    {
-      "Role": "Technical Lead",
-      "Skills": "Html, CSS, JavaScript, Redux",
-      "Experience":"9 to 12 years",
-      "Salary":"4.5 to 8LPA",
-      "Resume":"any"
-    },
-
-
   ]
 
   ngOnInit() {

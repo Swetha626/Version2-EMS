@@ -19,10 +19,11 @@
             text-align: center;
             padding: 5px;
             margin-left: 5%;
+            margin-top: 50px;
 
         }
         th{
-          font-size: larger;
+          /* font-size: larger; */
           background-color:#DBE4C6;
         }
          td,

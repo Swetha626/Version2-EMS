@@ -9,7 +9,7 @@
         <form [formGroup]="workForm">
         <table>
             <tr class="top">
-                <td>Task ID</td>
+                <!-- <td>Task ID</td> -->
                 <td>Task Name</td>
                 <td>Owner</td>
                 <td>Status</td>
@@ -19,10 +19,10 @@
                 <td>Update Status</td>
 
             </tr>
-            <tr class="bottom">
-                <td>EMS M1-001</td>
-                <td>UI Implementation</td>
-                <td>Swetha</td>
+            <tr class="bottom" *ngFor="let item of getTask">
+                <!-- <td>EMS M1-001</td> -->
+                <td style="color: #B70404;">{{item.taskname}}</td>
+                <td style="color:#B70404;">{{item.owner}}</td>
                 <td>
 
                     <select class="box" formControlName="status">
@@ -35,7 +35,7 @@
                     <small *ngIf="workForm.controls['status'].errors?.['required']"></small>
                     </div>
                 </td>
-                <td> 5 hr </td>
+                <td style="color: #B70404;">{{item.time}}</td>
                 <td>
                     <input formControlName="totalTime" class="txt" type="text" placeholder="Eg: 1h 30m" style="width: 80px;">
                     <div *ngIf="workForm.controls['totalTime'].invalid&&workForm.controls['totalTime'].touched">
@@ -44,7 +44,7 @@
 
                 </td>
 
-                <td >
+                <td>
                     <textarea formControlName="text"></textarea>
                     <div *ngIf="workForm.controls['text'].invalid&&workForm.controls['text'].touched">
                       <small *ngIf="workForm.controls['text'].errors?.['required']"></small>
@@ -52,10 +52,10 @@
 
                 </td>
                 <td>
-                    <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
+                    <button [disabled]="item.isDisabled" (click)="send(item)">Submit</button>
                 </td>
             </tr>
-            <tr class="bottom">
+            <!-- <tr class="bottom">
                 <td>EMS M1-002</td>
                 <td>Backend Implementation</td>
                 <td>Swetha</td>
@@ -153,11 +153,12 @@
                 <td>
                     <input type="button" type="submit" value="Submit" [disabled]="workForm.invalid" (click)="send()">
                 </td>
-            </tr>
+            </tr> -->
 
 
         </table>
     </form>
+    </div>
 
 <!-- <form [formGroup]="workForm">
         <div class="moduleName">

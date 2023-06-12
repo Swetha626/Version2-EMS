@@ -2,12 +2,9 @@
 
 <div class="dark">
 <div class="add">
-  <button mat-raised-button color="primary" >Add Employee</button>
+  <button mat-raised-button color="primary" (click)="add()">Add Employee</button>
 </div>
 <div class="content" *ngIf="status">
-
-
-
   <div id="card">
     <div id="card-content">
       <div id="card-title">
@@ -57,13 +54,10 @@
 
 
         <button mat-raised-button color="accent" style="width: 50px;" [disabled]="addForm.invalid" (click)="addDetails()">Add</button>
-        <button mat-raised-button color="warn" style="width: 50px; margin-left: 150px; margin-top: 0px;" >Close</button>
+        <button mat-raised-button color="warn" style="width: 50px; margin-left: 150px; margin-top: 0px;" (click)="close()" >Close</button>
 
 </div>
       </form>
-      <div class="side">
-
-      </div>
     </div>
 
   </div>

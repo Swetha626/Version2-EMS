@@ -12,12 +12,10 @@ import { AddEmpService } from '../Add_Emp/AddEmp.service';
   styleUrls: ['./Admin_Dashboard.component.css']
 })
 export class Admin_DashboardComponent implements OnInit {
-  // [x: string]: any;
-  // AddEmp: any;
-  // empData !:any;
+  
 
   constructor(public route:Router,private fb:FormBuilder,private http:HttpClient) { }
-// empObj:EmployeeModel=new EmployeeModel();
+
   addForm=this.fb.group({
     username:[,[Validators.required,Validators.minLength(3)]],
     mail:[,[Validators.required,Validators.pattern("^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$")]],
@@ -27,10 +25,16 @@ salary:[,[Validators.required]]
 
 
 status:boolean=false;
+add(){
+  this.status=!this.status;
+}
 show(item:any){
   this.status=!this.status;
   this.editEmp(item);
 
+}
+close(){
+  this.status=false;
 }
 addDetails(){
   if(this.addForm.valid){

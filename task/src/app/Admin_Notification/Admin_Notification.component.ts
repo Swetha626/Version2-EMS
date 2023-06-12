@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { FormBuilder, FormGroup} from '@angular/forms';
+import { Validators,PatternValidator} from '@angular/forms';
 @Component({
   selector: 'app-Admin_Notification',
   templateUrl: './Admin_Notification.component.html',
@@ -8,7 +9,36 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Admin_NotificationComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private fb:FormBuilder) { }
+  addForm=this.fb.group({
+    role:[,[Validators.required]],
+    skills:[,[Validators.required]],
+    exp:[,[Validators.required]],
+salary:[,[Validators.required]]
+  })
+  status:boolean=false;
+  add(){
+    this.status=!this.status;
+  }
+  addJob(){
+    if(this.addForm.valid){
+      alert("Successfully added");
+      this.postJob();
+    }
+  }
+  close(){
+    this.status=false;
+  }
+  postJob(){
+    var body={
+      role:this.addForm.value.role,
+      skills:this.addForm.value.skills,
+      exp:this.addForm.value.exp,
+      salary:this.addForm.value.salary,
+    }
+      this.http.post<any>("http://localhost:3000/JobOpenings",body).subscribe(data=>{
+  })
+  }
 getJava:any="";
 getUI:any="";
 getJFS:any="";
@@ -30,7 +60,5 @@ getTL:any="";
     this.http.get<any>("  http://localhost:3000/TechnicalLead").subscribe(value5=>{
       this.getTL=value5;
     });
-
   }
-
 }

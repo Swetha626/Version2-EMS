@@ -1,0 +1,62 @@
+<div class="mat-dialog-title">
+  <h1>Create Task</h1>
+</div>
+<div class="row">
+<div class="mat-dialog-content">
+  <form [formGroup]="attendForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Date</mat-label>
+    <input matInput formControlName="taskname">
+  </mat-form-field>
+    <div *ngIf="attendForm.controls['taskname'].invalid&&attendForm.controls['taskname'].touched">
+      <small *ngIf="attendForm.controls['taskname'].errors?.['required']">Please enter Taskname</small>
+      <small *ngIf="attendForm.controls['taskname'].errors?.['pattern']">First letter should be capital</small>
+    </div>
+
+  <br>
+
+  <div>
+    <label>Attendance:</label>
+    <mat-radio-group>
+      <mat-radio-button value="Present">Present</mat-radio-button>
+      <mat-radio-button value="Excused">Excused</mat-radio-button>
+      <mat-radio-button value="Leave">Leave</mat-radio-button>
+      <mat-radio-button value="Work From Home">Work From Home</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+    <!-- <ul>
+      <li><input type="radio" name="post" id="opt">
+        <label >Present</label></li>
+        <li><input type="radio" name="post" id="opt">
+          <label>Excused</label><br></li>
+          <li> <input type="radio" name="post" id="opt">
+            <label>Leave</label></li>
+            <li> <input type="radio" name="post" id="opt">
+              <label>Work From Home</label></li>
+    </ul> -->
+
+  <div *ngIf="attendForm.controls['owner'].invalid&&attendForm.controls['owner'].touched">
+    <small *ngIf="attendForm.controls['owner'].errors?.['required']">Please enter Ownername</small>
+    <small *ngIf="attendForm.controls['owner'].errors?.['pattern']">First letter should be capital</small>
+    <small *ngIf="attendForm.controls['owner'].errors?.['minlength']">Owner Name should be atleast 3 letter</small>
+  </div>
+  <br>
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Estimated time</mat-label>
+    <input matInput formControlName="time" pattern="^[1-9][0-9]{0,1}[h][r]$">
+  </mat-form-field>
+  <div *ngIf="taskForm.controls['time'].invalid&&taskForm.controls['owner'].touched">
+    <small *ngIf="taskForm.controls['time'].errors?.['required']">Please enter Estimated Time</small>
+    <small *ngIf="taskForm.controls['time'].errors?.['pattern']">Enter valid time</small>
+  </div> -->
+  </form>
+</div>
+</div>
+
+<div class="mat-dialog-action">
+<a routerLink="/Admin_Work">
+  <button mat-raised-button color="warn" >Close</button></a>
+  <button mat-raised-button  [disabled]="attendForm.invalid"color="primmary">Assign</button>
+</div>
+
