@@ -23,6 +23,7 @@ upload:[,[Validators.required]]
   recRole:any=this.openservice.applyRole;
 
   register()
+  
   {
     if(this.regForm.valid)
     {
