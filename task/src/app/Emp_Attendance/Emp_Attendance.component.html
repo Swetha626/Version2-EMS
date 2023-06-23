@@ -1,117 +1,121 @@
 <app-Emp_Header></app-Emp_Header>
 <div class="dark">
 <h1>Post Attendance</h1>
-<table>
+<div class="add">
+  <button mat-raised-button color="primary" style="margin-left: 80%; margin-top: 1%" (click)="view()">Attendance Status</button>
+</div>
+
+<table *ngIf="show">
+  <tr id="head">
+      <td>Username</td>
+      <td>Date</td>
+      <td>Status</td>
+  </tr>
+  <tr id="row" >
+   <td>{{getAttendance.username}}</td>
+   <td>{{getAttendance.date| date:"EEE,MMMM,d,y"}}</td>
+   <td>{{getAttendance.status}}</td>
+  </tr>
+
+</table>
+
+<form [formGroup]="attendanceForm">
+  <table>
     <tr class="Top">
         <td>Date</td>
         <td>Attendance</td>
         <td>Post</td>
-        <td><i class="fa fa-clock-o" style="font-size:30px;"></i></td>
     </tr>
     <tr>
-        <td>01 Oct,2023</td>
+        <td> {{ currentDate | date:"EEE,MMMM d, y" }}</td>
         <td>
-          <ul style="text-align: left;">
+          <ul>
+            <li *ngIf="present"> <input  formControlName="post" name="post" id="post" type="radio" value="Present">Present</li>
+            <li *ngIf="excused"> <input  formControlName="post" name="post" id="post"  type="radio" value="Excused">Excused</li>
+            <li> <input  formControlName="post" name="post" id="post"  type="radio" value="Leave">Leave</li>
+            <li> <input  formControlName="post" name="post" id="post"  type="radio" value="Work From Home">Work From Home</li>
+          </ul>
+            <br>
+        </td>
+        <td>
+          <button type="submit" [disabled]="attendanceForm.invalid" [hidden]="getAttendance.date==today" (click)="sub()">Submit</button>
+        </td>
+
+    </tr>
+    <tr>
+        <!-- <td >Tue 20 June,2023</td>
+        <td>
+          <ul>
             <li> <input type="radio">Present</li>
             <li> <input type="radio">Excused</li>
             <li> <input type="radio">Leave</li>
+            <li> <input type="radio">Work From Home</li>
           </ul>
-          <!-- <ul>
-            <li *ngIf="hide"><input type="radio" name="post" id="opt">
-              <span>Present</span></li>
-              <li><input type="radio" name="post" id="opt">
-                <span>Excused</span></li>
-                <li> <input type="radio" name="post" id="opt">
-                  <span>Leave</span></li>
-                  <li> <input type="radio" name="post" id="opt">
-                    <span>Work From Home</span></li>
-          </ul> -->
-        </td>
-        <td>
-          <button type="submit">Submit</button>
-        </td>
-        <td id="countDown">20:00</td>
-    </tr>
-    <tr>
-        <td>02 Oct,2023</td>
-        <td>
-          <ul>
-            <li><input type="radio" name="post" id="opt">
-              <label>Present</label></li>
-              <li><input type="radio" name="post" id="opt">
-                <label>Excused</label><br></li>
-                <li> <input type="radio" name="post" id="opt">
-                  <label>Leave</label></li>
-                  <li> <input type="radio" name="post" id="opt">
-                    <label>Work From Home</label></li>
-          </ul>
-        </td>
-        <td>
-          <button type="submit">Submit</button>
-        </td>
-        <td id="countDown">20:00</td>
-    </tr>
-    <tr>
-        <td>26 Oct,2022</td>
-        <ul>
-          <li><input type="radio" name="post" id="opt">
-            <label>Present</label></li>
-            <li><input type="radio" name="post" id="opt">
-              <label>Excused</label><br></li>
-              <li> <input type="radio" name="post" id="opt">
-                <label>Leave</label></li>
-                <li> <input type="radio" name="post" id="opt">
-                  <label>Work From Home</label></li>
-        </ul>
-        <td>
-          <button type="submit">Submit</button>
-        </td>
-        <td id="countDown">20:00</td>
-    </tr>
-    <tr>
-        <td>27 Oct,2022</td>
-        <ul>
-          <li><input type="radio" name="post" id="opt">
-            <label>Present</label></li>
-            <li><input type="radio" name="post" id="opt">
-              <label>Excused</label><br></li>
-              <li> <input type="radio" name="post" id="opt">
-                <label>Leave</label></li>
-                <li> <input type="radio" name="post" id="opt">
-                  <label>Work From Home</label></li>
-        </ul>
-        <td>
-            <button type="submit">Submit</button>
-        </td>
-        <td id="countDown">20:00</td>
-    </tr>
-    <tr>
-        <td>28 Oct,2022</td>
-        <td>
-
-          <ul>
-            <li><input type="radio" name="post" id="opt">
-              <label>Present</label></li>
-              <li><input type="radio" name="post" id="opt">
-                <label>Excused</label><br></li>
-                <li> <input type="radio" name="post" id="opt">
-                  <label>Leave</label></li>
-                  <li> <input type="radio" name="post" id="opt">
-                    <label>Work From Home</label></li>
-          </ul>
-                <!-- <option value="Present">Present</option>
-                <option value="Leave">Leave</option>
-                <option value="Late">Excused</option>
-                <option value="Work From Home">Work From Home</option> -->
 
         </td>
         <td>
-          <button type="submit">Submit</button>
+          <button [disabled]="true" type="submit">Submit</button>
         </td>
-        <td id="countDown">20:00</td>
+
     </tr>
     <tr>
+        <td>Wed 21 June,2023</td>
+
+        <td>
+          <ul>
+            <li> <input type="radio">Present</li>
+            <li> <input type="radio">Excused</li>
+            <li> <input type="radio">Leave</li>
+            <li> <input type="radio">Work From Home</li>
+          </ul>
+          </td>
+          <td>
+            <button [disabled]="true" type="submit">Submit</button>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>Thu 22 June,2023</td>
+        <td>
+
+          <ul>
+            <li> <input type="radio">Present</li>
+            <li> <input type="radio">Excused</li>
+            <li> <input type="radio">Leave</li>
+            <li> <input type="radio">Work From Home</li>
+          </ul>
+
+
+        </td>
+        <td>
+          <button [disabled]="true" type="submit">Submit</button>
+        </td>
+
+    </tr>
+
+    <tr>
+      <td>Fri 23 June,2023</td>
+      <td>
+
+        <ul>
+          <li> <input type="radio">Present</li>
+          <li> <input type="radio">Excused</li>
+          <li> <input type="radio">Leave</li>
+          <li> <input type="radio">Work From Home</li>
+        </ul>
+
+
+      </td>
+      <td>
+        <button [disabled]="true" type="submit">Submit</button>
+      </td>
+
+  </tr> -->
+
 </table>
 
+</form>
 
 </div>
+

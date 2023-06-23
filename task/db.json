@@ -1,18 +1,11 @@
 {
   "addEmp": [
     {
-      "username": "Asha G",
-      "mail": "ashagokul@gmail.com",
-      "mobile": "8957612740",
+      "username": "Swetha S",
+      "mail": "swethasuresh626@gmail.com",
+      "mobile": "9842413031",
       "salary": "55000",
       "id": 2
-    },
-    {
-      "username": "Asha G",
-      "mail": "ashagokul@gmail.com",
-      "mobile": "8957612740",
-      "salary": "65000",
-      "id": 3
     }
   ],
   "empLogin": [
@@ -20,10 +13,6 @@
       "userId": "Swetha101",
       "password": "Swetha@123",
       "userName": "Swetha"
-    },
-    {
-      "userId": "Asha102",
-      "password": "Asha@626"
     }
   ],
   "adminLogin": [
@@ -61,30 +50,36 @@
       "tlname": "Naveen",
       "deptname": "Testing",
       "mobile": "9842413031",
-      "leaveDate": "2023-06-06",
-      "returnDate": "2023-06-08",
-      "reason": "Function",
-      "id": 1
-    },
-    {
-      "username": "Asha G",
-      "tlname": "Snigdha",
-      "deptname": "UI Developer",
-      "mobile": "8645975128",
-      "leaveDate": "2023-06-12",
-      "returnDate": "2023-06-14",
-      "reason": "Condolence",
-      "id": 2
+      "leaveDate": "2023-06-21",
+      "returnDate": "2023-06-23",
+      "reason": "Sick",
+      "status": "",
+      "id": 1,
+      "Status": "Leave Approved"
     },
     {
       "username": "Swetha",
-      "tlname": "Asha",
-      "deptname": "Testing",
-      "mobile": "7843954182",
-      "leaveDate": "2023-06-13",
-      "returnDate": "2023-06-15",
+      "tlname": "Savitha",
+      "deptname": "Developer",
+      "mobile": "9842413031",
+      "leaveDate": "2023-06-26",
+      "returnDate": "2023-06-28",
       "reason": "Function",
-      "id": 3
+      "status": "",
+      "id": 2,
+      "Status": "Leave Cancelled"
+    },
+    {
+      "username": "Swetha",
+      "tlname": "Snigdha ",
+      "deptname": "Testing",
+      "mobile": "9842413031",
+      "leaveDate": "2023-06-29",
+      "returnDate": "2023-06-30",
+      "reason": "Doctor Appointment",
+      "status": "",
+      "id": 3,
+      "Status": "Leave Cancelled"
     }
   ],
   "WorkForm": [
@@ -93,60 +88,57 @@
       "owner": "Swetha",
       "time": "12hr",
       "id": 1
-    },
-    {
-      "taskname": "Module Creation",
-      "owner": "Swetha",
-      "time": "6hr",
-      "id": 2
-    },
-    {
-      "taskname": "Frontend Development",
-      "owner": "Swetha",
-      "time": "12hr",
-      "id": 3
     }
   ],
   "EmpStatus": [
     {
-      "status": "In-Progress",
-      "totalTime": "7hr",
-      "text": "Yet to complete",
-      "id": 1
-    },
-    {
-      "status": "In-Progress",
-      "totalTime": "3hr",
-      "text": "Last one module is pending",
-      "id": 2
-    },
-    {
-      "status": "In-Progress",
-      "totalTime": "5hr",
-      "text": "ttttt",
-      "id": 3
-    },
-    {
       "status": "Completed",
-      "totalTime": "s",
-      "text": "sss",
-      "id": 4
+      "totalTime": "13hr",
+      "text": "completed all the modules",
+      "id": 1
     }
   ],
   "JobOpenings": [],
-  "Approve": [
+  "LeaveStatus": [
     {
-      "empName": "Swetha",
-      "empMobile": "9842413031",
-      "empReason": "Function",
+      "username": "Swetha",
+      "tlname": "Naveen",
+      "dept": "Testing",
+      "leave": "2023-06-21",
+      "return": "2023-06-23",
       "Status": "Leave Approved",
       "id": 1
     },
     {
-      "empName": "Swetha",
-      "empMobile": "9842413031",
-      "empReason": "Function",
-      "Status": "Leave Approved",
+      "username": "Swetha",
+      "tlname": "Savitha",
+      "dept": "Developer",
+      "leave": "2023-06-26",
+      "return": "2023-06-28",
+      "Status": "Leave Cancelled",
+      "id": 2
+    },
+    {
+      "username": "Swetha",
+      "tlname": "Snigdha ",
+      "dept": "Testing",
+      "leave": "2023-06-29",
+      "return": "2023-06-30",
+      "Status": "Leave Cancelled",
+      "id": 3
+    }
+  ],
+  "Attendance": [
+    {
+      "username": "Swetha",
+      "date": "6/21/2023",
+      "status": "Work From Home",
+      "id": 1
+    },
+    {
+      "username": "Swetha",
+      "date": "6/22/2023",
+      "status": "Leave",
       "id": 2
     }
   ]

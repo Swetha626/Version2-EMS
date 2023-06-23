@@ -12,7 +12,7 @@ import { AddEmpService } from '../Add_Emp/AddEmp.service';
   styleUrls: ['./Admin_Dashboard.component.css']
 })
 export class Admin_DashboardComponent implements OnInit {
-  
+
 
   constructor(public route:Router,private fb:FormBuilder,private http:HttpClient) { }
 
@@ -69,7 +69,10 @@ getDetails:any="";
     this.addForm.controls['mail'].setValue(item.mail);
     this.addForm.controls['mobile'].setValue(item.mobile);
     this.addForm.controls['salary'].setValue(item.salary);
+    this.http.patch<any>("http://localhost:3000/addEmp/"+item.id,this.addForm.value).subscribe(data=>{
+      alert("patch")
 
+    })
   }
 // delEmp(item:any){
 //   this.delEmp(item.id).subscribe(()=>{

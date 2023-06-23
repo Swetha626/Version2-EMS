@@ -1,8 +1,24 @@
 <app-Admin_Header></app-Admin_Header>
 <div class="dark">
-  <div class="add">
-    <button mat-raised-button color="primary" style="margin-left: 68%; margin-top: 1%" (click)="openForm()">Generate Attendance</button>
-  </div>
+  <table>
+    <tr class="Top">
+        <td>Employee Name</td>
+
+        <td>Date</td>
+        <td>Status</td>
+    </tr>
+    <tr class="bottom" *ngFor="let item of getStatus">
+      <td>{{item.username}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.status}}</td>
+      
+    </tr>
+    <br>
+
+
+
+</table>
+
 </div>
 
 

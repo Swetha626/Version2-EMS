@@ -26,9 +26,9 @@
       <td>{{item.returnDate}}</td>
       <td>{{item.reason}}</td>
       <td>
-        <button mat-raised-button color="primary" style="width: 90px; height: 30px;" (click)="approve(item)">Approve</button>
+        <button mat-raised-button color="primary" style="width: 90px; height: 30px;" (click)="approve(item)" [disabled]="item.Status=='Leave Approved' || item.Status=='Leave Cancelled'">Approve</button>
         <br><br>
-        <button mat-raised-button color="warn" style="width: 90px; height: 30px;">Cancel</button>
+        <button mat-raised-button color="warn" style="width: 90px; height: 30px;" (click)="cancel(item)" [disabled]="item.Status=='Leave Approved' || item.Status=='Leave Cancelled'">Cancel</button>
       </td>
 
 

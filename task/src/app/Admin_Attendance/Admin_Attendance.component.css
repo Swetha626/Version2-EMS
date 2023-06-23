@@ -5,3 +5,29 @@
    top: 0;
    margin-left: 200px;
 }
+table, th, td,tr{
+  margin-left: 20%;
+    border: 20px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0px;
+  }
+  td,th{
+    border: 1px solid #DFD3C3;
+    border-collapse: separate;
+    padding: 20px;
+  }
+  .Top{
+    background-color:rgba(248, 215, 173, 0.5) ;
+  }
+  .bottom{
+    background-color: rgba(243, 240, 240, 0.5);
+  }
+  label{
+    /* width: 150px; */
+    height: 10px;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+
+  }

@@ -79,15 +79,15 @@ const routes: Routes = [
     path:"Emp_WorkStatus",
     component:Emp_WorkStatusComponent
   },
-  
+
   {
     path:"Emp_cPass",
     component:Emp_cPassComponent
   },
-  {
-    path:"Admin-Page",
-    component:Admin_HomeComponent
-  },
+  // {
+  //   path:"Admin-Page",
+  //   component:Admin_HomeComponent
+  // },
   {
     path:"Admin_Home",
     component:Admin_HomeComponent

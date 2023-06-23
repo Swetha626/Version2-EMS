@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { AttendanceFormComponent } from '../attendanceForm/attendanceForm.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-Admin_Attendance',
   templateUrl: './Admin_Attendance.component.html',
@@ -8,11 +7,13 @@ import { AttendanceFormComponent } from '../attendanceForm/attendanceForm.compon
 })
 export class Admin_AttendanceComponent implements OnInit {
 
-  constructor(private dia:MatDialog) { }
-  openForm(){
-    this.dia.open(AttendanceFormComponent);
-  }
+  constructor(private http:HttpClient) { }
+getStatus:any='';
   ngOnInit() {
+    this.http.get<any>("http://localhost:3000/Attendance").subscribe(data=>{
+      this.getStatus=data;
+    })
+
   }
 
 }

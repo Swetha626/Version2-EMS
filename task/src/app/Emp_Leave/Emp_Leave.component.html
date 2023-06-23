@@ -6,13 +6,6 @@
     </div>
     <form class="form" [formGroup]="leaveForm">
         <label>Employee Name</label> <span>{{loginID.userName}}</span>
-        <!-- <input type="text" formControlName="username" value="{{loginID.userName}}" id="username" style="text-align: center;" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$"> -->
-        <!-- <div *ngIf="leaveForm.controls['username'].dirty || leaveForm.controls['username'].touched">
-          <small *ngIf="leaveForm.controls['username'].errors?.['touched']">Please enter username</small>
-          <small *ngIf="leaveForm.controls['username'].errors?.['required']">Please enter username</small>
-          <small *ngIf="leaveForm.controls['username'].errors?.['minlength']">User name should be atleast 3 letters</small>
-          <small *ngIf="leaveForm.controls['username'].errors?.['pattern']">First letter should be capital</small>
-        </div> -->
         <br>
         <label>Team Leader Name</label>
         <input type="text" formControlName="tlname" placeholder="enter your TL name" id="leadname" style="text-align: center;">
@@ -73,8 +66,29 @@
     <div class="btn">
       <button type="submit"[disabled]="leaveForm.invalid" (click)="sub()">Submit</button>
     </div>
-    <h2 *ngIf="show">{{leaveStatus.Status}}</h2>
+
 
     </form>
+
+    <table *ngIf="show">
+      <tr class="Top">
+          <td>TL Name</td>
+          <td>Department</td>
+          <td>Leave Date</td>
+          <td>Return Date</td>
+          <td>Reason</td>
+          <td>Status</td>
+      </tr>
+      <tr class="bottom" *ngFor="let item of getLeave">
+        <td>{{item.tlname}}</td>
+        <td>{{item.deptname}}</td>
+        <td>{{item.leaveDate}}</td>
+        <td>{{item.returnDate}}</td>
+        <td>{{item.reason}}</td>
+        <td>{{item.Status}}</td>
+      </tr>
+
+</table>
+
     </div>
 

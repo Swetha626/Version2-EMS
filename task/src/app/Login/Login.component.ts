@@ -33,7 +33,7 @@ admin()
     if(admin){
       alert("Login Successfully");
       this.loginForm.reset();
-      this.router.navigate(['Admin-Page'])
+      this.router.navigate(['Admin_Details'])
     }
 })
 }

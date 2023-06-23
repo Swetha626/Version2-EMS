@@ -5,10 +5,6 @@
 </p> -->
 <app-Admin_Header></app-Admin_Header>
 <div class="dark">
-
-  <div class="add">
-    <button mat-raised-button color="primary" style="margin-left: 68%; margin-top: 1%" (click)="add()">Job Roles</button>
-  </div>
   <div class="content" *ngIf="status">
     <div id="card">
       <div id="card-content">
@@ -16,53 +12,9 @@
           <h2>Employee Details</h2>
           <div class="underline-title"></div>
         </div>
-  <form class="form" [formGroup]="addForm">
-    <label>Employee Role </label>
-    <input type="text" style="background-color: darkgray;" formControlName="role" class="form-content" pattern="^[A-Z][a-z]*[' ']*[A-Z]*[' ']*[A-Z]*$">
-    <div class="form-border"></div>
-    <div *ngIf="addForm.controls['role'].invalid&&addForm.controls['role'].touched">
-      <small *ngIf="addForm.controls['role'].errors?.['required']">Please enter Job Roles</small>
-
-      <small *ngIf="addForm.controls['role'].errors?.['pattern']">First letter should be capital</small>
-    </div>
-
-<br>
-    <label>Skills</label>
-    <input type="text" style="background-color: darkgray;" formControlName="skills" class="form-content">
-    <div class="form-border"></div>
-    <div *ngIf="addForm.controls['skills'].invalid&&addForm.controls['skills'].touched">
-      <small *ngIf="addForm.controls['skills'].errors?.['required']">Please enter Skills</small>
-
       </div>
-      <br>
-      <label>Work Experience </label>
-    <input type="text" style="background-color: darkgray;" formControlName="exp" class="form-content"  pattern="^[6789][0-9]{9}$" >
-    <div class="form-border"></div>
-     <div *ngIf="addForm.controls['exp'].invalid&&addForm.controls['exp'].touched">
-    <small *ngIf="addForm.controls['exp'].errors?.['required']">Please enter Work Experience</small>
-
     </div>
-    <br>
-     <label>Salary</label>
-    <input type="text" style="background-color: darkgray;" formControlName="salary" class="form-content">
-    <div class="form-border"></div>
-    <div *ngIf="addForm.controls['salary'].invalid&&addForm.controls['salary'].touched">
-   <small *ngIf="addForm.controls['salary'].errors?.['required']">Please enter mobile number</small>
-    <br>
-
-    </div>
-<br>
-    <div class="mat-dialog-action">
-      <button mat-raised-button color="accent" style="width: 50px;" [disabled]="addForm.invalid" (click)="addJob()">Add</button>
-      <button mat-raised-button color="warn" style="width: 50px; margin-left: 150px; margin-top: 0px;" (click)="close()">Close</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-
-
-
+  </div>
 
 <div class="moduleName">
   <h4>Role 01: Java Developer </h4>
@@ -75,14 +27,12 @@
     <td>Resume</td>
   </tr>
   <tr class="bottom" *ngFor="let item of getJava">
-
     <td>{{item.username}}</td>
     <td>{{item.mobile}}</td>
     <td>{{item.mail}}</td>
     <td></td>
   </tr>
 </table>
-
         <div class="moduleName">
           <h4>Role 02:UI Developer</h4>
         </div>
@@ -98,7 +48,7 @@
             <td>{{item.mobile}}</td>
             <td>{{item.mail}}</td>
             <td></td>
-            </tr>
+          </tr>
 
         </table>
 
