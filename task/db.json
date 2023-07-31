@@ -4,13 +4,13 @@
       "username": "Swetha S",
       "mail": "swethasuresh626@gmail.com",
       "mobile": "9842413031",
-      "salary": "55000",
-      "id": 2
+      "salary": "32000",
+      "id": 1
     }
   ],
   "empLogin": [
     {
-      "userId": "Swetha101",
+      "userId": "Swetha Suresh",
       "password": "Swetha@123",
       "userName": "Swetha"
     }
@@ -21,37 +21,14 @@
       "password": "Swetha@admin"
     }
   ],
-  "resume": [
-    {}
-  ],
-  "JavaDeveloper": [
-    {
-      "username": "Asha G",
-      "mobile": "8945678129",
-      "mail": "ashagokul@gmail.com",
-      "role": "Java Developer",
-      "id": 1
-    }
-  ],
-  "UIDeveloper": [
-    {
-      "username": "Swetha S",
-      "mobile": "9842413031",
-      "mail": "swethasuresh626@gmail.com",
-      "role": "UI Developer",
-      "id": 1
-    }
-  ],
-  "AutomationTester": [],
-  "TechnicalLead": [],
   "leaveForm": [
     {
       "username": "Swetha",
       "tlname": "Naveen",
       "deptname": "Testing",
       "mobile": "9842413031",
-      "leaveDate": "2023-06-21",
-      "returnDate": "2023-06-23",
+      "leaveDate": "2023-07-07",
+      "returnDate": "2023-07-10",
       "reason": "Sick",
       "status": "",
       "id": 1,
@@ -59,87 +36,55 @@
     },
     {
       "username": "Swetha",
-      "tlname": "Savitha",
+      "tlname": "snigdha ",
       "deptname": "Developer",
       "mobile": "9842413031",
-      "leaveDate": "2023-06-26",
-      "returnDate": "2023-06-28",
+      "leaveDate": "2023-07-19",
+      "returnDate": "2023-07-21",
       "reason": "Function",
       "status": "",
       "id": 2,
-      "Status": "Leave Cancelled"
-    },
-    {
-      "username": "Swetha",
-      "tlname": "Snigdha ",
-      "deptname": "Testing",
-      "mobile": "9842413031",
-      "leaveDate": "2023-06-29",
-      "returnDate": "2023-06-30",
-      "reason": "Doctor Appointment",
-      "status": "",
-      "id": 3,
       "Status": "Leave Cancelled"
     }
   ],
   "WorkForm": [
     {
-      "taskname": "Backend Implementation",
+      "taskname": "Login UI",
       "owner": "Swetha",
       "time": "12hr",
-      "id": 1
+      "id": 1,
+      "status": "In-Progress",
+      "totalTime": "8hr",
+      "text": "Going to complete"
     }
   ],
-  "EmpStatus": [
-    {
-      "status": "Completed",
-      "totalTime": "13hr",
-      "text": "completed all the modules",
-      "id": 1
-    }
-  ],
-  "JobOpenings": [],
+  "EmpStatus": [],
   "LeaveStatus": [
     {
       "username": "Swetha",
       "tlname": "Naveen",
       "dept": "Testing",
-      "leave": "2023-06-21",
-      "return": "2023-06-23",
+      "leave": "2023-07-07",
+      "return": "2023-07-10",
       "Status": "Leave Approved",
       "id": 1
     },
     {
       "username": "Swetha",
-      "tlname": "Savitha",
+      "tlname": "snigdha ",
       "dept": "Developer",
-      "leave": "2023-06-26",
-      "return": "2023-06-28",
+      "leave": "2023-07-19",
+      "return": "2023-07-21",
       "Status": "Leave Cancelled",
       "id": 2
-    },
-    {
-      "username": "Swetha",
-      "tlname": "Snigdha ",
-      "dept": "Testing",
-      "leave": "2023-06-29",
-      "return": "2023-06-30",
-      "Status": "Leave Cancelled",
-      "id": 3
     }
   ],
   "Attendance": [
     {
       "username": "Swetha",
-      "date": "6/21/2023",
+      "date": "7/10/2023",
       "status": "Work From Home",
       "id": 1
-    },
-    {
-      "username": "Swetha",
-      "date": "6/22/2023",
-      "status": "Leave",
-      "id": 2
     }
   ]
 }

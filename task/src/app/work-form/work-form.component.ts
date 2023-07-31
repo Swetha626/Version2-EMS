@@ -15,9 +15,7 @@ taskForm=this.fb.group({
   owner:[,[Validators.required,Validators.minLength(3)]],
   time:[,[Validators.required]],
 })
-// if(this.editData){
-//   this.
-// }
+
 task(){
   if(this.taskForm.valid){
     alert("Task Assigned Successfully");
@@ -35,8 +33,7 @@ db(){
 this.http.post<any>("http://localhost:3000/WorkForm",body).subscribe(data=>{
 
 })
-
-
-
 }
+
+
 }

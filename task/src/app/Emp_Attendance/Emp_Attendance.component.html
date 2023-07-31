@@ -13,7 +13,7 @@
   </tr>
   <tr id="row" >
    <td>{{getAttendance.username}}</td>
-   <td>{{getAttendance.date| date:"EEE,MMMM,d,y"}}</td>
+   <td>{{getAttendance.date| date:'EEEE, MMMM d, y'}}</td>
    <td>{{getAttendance.status}}</td>
   </tr>
 
@@ -27,7 +27,7 @@
         <td>Post</td>
     </tr>
     <tr>
-        <td> {{ currentDate | date:"EEE,MMMM d, y" }}</td>
+        <td> {{ currentDate | date:'EEEE, MMMM d, y' }}</td>
         <td>
           <ul>
             <li *ngIf="present"> <input  formControlName="post" name="post" id="post" type="radio" value="Present">Present</li>
@@ -43,75 +43,6 @@
 
     </tr>
     <tr>
-        <!-- <td >Tue 20 June,2023</td>
-        <td>
-          <ul>
-            <li> <input type="radio">Present</li>
-            <li> <input type="radio">Excused</li>
-            <li> <input type="radio">Leave</li>
-            <li> <input type="radio">Work From Home</li>
-          </ul>
-
-        </td>
-        <td>
-          <button [disabled]="true" type="submit">Submit</button>
-        </td>
-
-    </tr>
-    <tr>
-        <td>Wed 21 June,2023</td>
-
-        <td>
-          <ul>
-            <li> <input type="radio">Present</li>
-            <li> <input type="radio">Excused</li>
-            <li> <input type="radio">Leave</li>
-            <li> <input type="radio">Work From Home</li>
-          </ul>
-          </td>
-          <td>
-            <button [disabled]="true" type="submit">Submit</button>
-        </td>
-
-    </tr>
-
-    <tr>
-        <td>Thu 22 June,2023</td>
-        <td>
-
-          <ul>
-            <li> <input type="radio">Present</li>
-            <li> <input type="radio">Excused</li>
-            <li> <input type="radio">Leave</li>
-            <li> <input type="radio">Work From Home</li>
-          </ul>
-
-
-        </td>
-        <td>
-          <button [disabled]="true" type="submit">Submit</button>
-        </td>
-
-    </tr>
-
-    <tr>
-      <td>Fri 23 June,2023</td>
-      <td>
-
-        <ul>
-          <li> <input type="radio">Present</li>
-          <li> <input type="radio">Excused</li>
-          <li> <input type="radio">Leave</li>
-          <li> <input type="radio">Work From Home</li>
-        </ul>
-
-
-      </td>
-      <td>
-        <button [disabled]="true" type="submit">Submit</button>
-      </td>
-
-  </tr> -->
 
 </table>
 

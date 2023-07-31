@@ -21,6 +21,7 @@ import { Admin_DashboardComponent } from './Admin_Dashboard/Admin_Dashboard.comp
 import { Admin_leaveComponent } from './Admin_leave/Admin_leave.component';
 import { Admin_DetailsComponent } from './Admin_Details/Admin_Details.component';
 import { Admin_AttendanceComponent } from './Admin_Attendance/Admin_Attendance.component';
+import { DeactivateGuard } from './deactivate.guard';
 
 const routes: Routes = [
   {
@@ -68,12 +69,17 @@ const routes: Routes = [
 
   },
   {
+  path:"Emp_Home",
+  component:Emp_HomeComponent
+  },
+  {
     path:"Emp_Attendance",
     component:Emp_AttendanceComponent
   },
   {
     path:"Emp_Leave",
-    component:Emp_LeaveComponent
+    component:Emp_LeaveComponent,
+    canDeactivate:[DeactivateGuard]
   },
   {
     path:"Emp_WorkStatus",

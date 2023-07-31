@@ -21,45 +21,20 @@
       <td>Update Status</td>
 
   </tr>
-  <tr class="bottom" *ngFor="let item of getWork1,let element of getWork2">
+  <tr class="bottom" *ngFor="let item of getWork1">
       <!-- <td>EMS M1-001</td> -->
-      <td>{{item.taskname}}</td>
-      <td>{{item.owner}}</td>
-      <td>{{element.status}}</td>
-      <td>{{item.time}}</td>
-      <td>{{element.totalTime}}</td>
-      <td>{{element.text}}</td>
+      <td style="color: #B70404;">{{item.taskname}}</td>
+      <td style="color: #B70404;">{{item.owner}}</td>
+      <td style="color:darkblue;">{{item.status}}</td>
+      <td style="color: #B70404;">{{item.time}}</td>
+      <td style="color: darkblue;">{{item.totalTime}}</td>
+      <td style="color: darkblue;">{{item.text}}</td>
       <td>
         <button mat-icon-button color="primary" (click)="editTask(item)"><mat-icon>edit</mat-icon></button>
         <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </td>
   </tr>
-  <!-- <tr class="bottom" *ngFor="let item of getWork">
-      <td>EMS M1-002</td>
-      <td>{{item.taskname}}</td>
-      <td>{{item.owner}}</td>
-      <td></td>
-      <td>{{item.time}}</td>
-      <td></td>
-      <td></td>
-      <td>
-        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
-      </td>
-  </tr>
-  <tr class="bottom">
-      <td>EMS M1-003</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>
-        <button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button>
-        <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
-      </td>
-  </tr> -->
+
 
 </table>
 </div>

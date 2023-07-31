@@ -32,14 +32,15 @@
                         <option value="Completed">Completed</option>
                     </select>
                     <div *ngIf="workForm.controls['status'].invalid&&workForm.controls['status'].touched">
-                    <small *ngIf="workForm.controls['status'].errors?.['required']"></small>
+                    <small *ngIf="workForm.controls['status'].errors?.['required']"> Required</small>
                     </div>
                 </td>
                 <td style="color: #B70404;">{{item.time}}</td>
                 <td>
-                    <input formControlName="totalTime" class="txt" type="text" placeholder="Eg: 1h 30m" style="width: 80px;">
+                    <input formControlName="totalTime" class="txt" type="text" placeholder="2hr" pattern="^[1-9][0-9]{0,1}[h][r]$" style="width: 80px;">
                     <div *ngIf="workForm.controls['totalTime'].invalid&&workForm.controls['totalTime'].touched">
-                      <small *ngIf="workForm.controls['totalTime'].errors?.['required']"></small>
+                      <small *ngIf="workForm.controls['totalTime'].errors?.['required']">Required </small>
+                      <small *ngIf="workForm.controls['totalTime'].errors?.['pattern']">Enter Valid Time</small>
                     </div>
 
                 </td>
@@ -47,7 +48,7 @@
                 <td>
                     <textarea formControlName="text"></textarea>
                     <div *ngIf="workForm.controls['text'].invalid&&workForm.controls['text'].touched">
-                      <small *ngIf="workForm.controls['text'].errors?.['required']"></small>
+                      <small *ngIf="workForm.controls['text'].errors?.['required']">Required</small>
                       </div>
 
                 </td>

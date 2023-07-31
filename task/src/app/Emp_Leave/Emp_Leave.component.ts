@@ -16,6 +16,15 @@ export class Emp_LeaveComponent implements OnInit{
     returnDate:[,[Validators.required]],
     reason:[,[Validators.required]]
 })
+canExit():boolean{
+  console.log("Can Exit")
+  if(confirm("Leave the page")){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 getLeave:any="";
 loginID:any;
 ngOnInit(){

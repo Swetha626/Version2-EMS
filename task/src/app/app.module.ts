@@ -38,6 +38,7 @@ import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorkFormComponent } from './work-form/work-form.component';
 import { AttendanceFormComponent } from './attendanceForm/attendanceForm.component';
+import { DeactivateGuard } from './deactivate.guard';
 
 
 
@@ -87,7 +88,7 @@ import { AttendanceFormComponent } from './attendanceForm/attendanceForm.compone
     MatInputModule,MatRadioModule
 
   ],
-  providers: [],
+  providers: [DeactivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

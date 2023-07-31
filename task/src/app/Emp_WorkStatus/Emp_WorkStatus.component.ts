@@ -30,29 +30,22 @@ export class Emp_WorkStatusComponent implements OnInit {
     if(this.workForm.valid)
     {
       alert("Work Status Submitted successfully");
-      this.db();
+      this.db(item);
 
     }
   }
 
-  db(){
+  db(item:any){
     var body={
       status:this.workForm.value.status,
       totalTime:this.workForm.value.totalTime,
       text:this.workForm.value.text
 
     }
-    this.http.post<any>("http://localhost:3000/EmpStatus",body).subscribe(data=>{
+    this.http.patch<any>("http://localhost:3000/WorkForm/"+item.id,body).subscribe(data=>{
 
     })
   }
-  // sub(){
-  //   if(this.ForgotForm.valid)
-  //   {
-  //     this.status=true;
-  //     alert("Successfully Submitted");
-
-  //   }
-  // }
+ 
 
 }

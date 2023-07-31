@@ -8,8 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class Emp_HomeComponent implements OnInit {
 
   constructor() { }
+add:any='';
 
   ngOnInit() {
+    this.open();
   }
 
+  open(){
+    this.add=true;
+    this.close();
+
+  }
+  close(){
+    setInterval(()=>{
+      this.add=false
+
+    },50000)
+
+
+  }
 }
