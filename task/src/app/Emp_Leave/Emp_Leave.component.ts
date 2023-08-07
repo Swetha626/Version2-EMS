@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, PatternValidator } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-Emp_Leave',
   templateUrl: './Emp_Leave.component.html',
@@ -34,9 +36,9 @@ ngOnInit(){
     this.loginID = JSON.parse(sessionUser);  //<-- Geting ID from session strongs (as viewable obj)
   }
 
-  this.http.get<any>("http://localhost:3000/leaveForm").subscribe(value=>{
-    this.getLeave=value;
-  });
+  this.search().subscribe(data=>{
+    this.getLeave=data;
+  })
 }
 
 status:boolean=false;
@@ -55,6 +57,18 @@ sub(){
     this.leaveForm.reset();
   }
 }
+
+search(): Observable<any> {
+  return this.http.get<any>(environment.empLeave).pipe(
+    map((data) => {
+      return data.filter(
+        (item:any) =>
+          item.username===this.loginID.userName
+      );
+    })
+  );
+}
+
 db(){
   var body={
     username:this.loginID.userName,
@@ -66,7 +80,7 @@ db(){
     reason:this.leaveForm.value.reason,
     status:''
   }
-    this.http.post<any>("http://localhost:3000/leaveForm",body).subscribe(data=>{
+    this.http.post<any>(environment.empLeave,body).subscribe(data=>{
 
 
 })

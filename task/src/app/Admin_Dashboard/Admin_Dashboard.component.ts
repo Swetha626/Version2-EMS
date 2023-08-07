@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup} from '@angular/forms';
 import { Validators,PatternValidator} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AddEmpService } from '../Add_Emp/AddEmp.service';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -45,7 +46,7 @@ addDetails(){
 }
 getDetails:any="";
   ngOnInit() {
-    this.http.get<any>("http://localhost:3000/addEmp").subscribe(value1=>{
+    this.http.get<any>(environment.adminAddemp).subscribe(value1=>{
       this.getDetails=value1;
     });
   }
@@ -60,7 +61,7 @@ getDetails:any="";
         salary:this.addForm.value.salary,
 
       }
-        this.http.post<any>("http://localhost:3000/addEmp",body).subscribe(data=>{
+        this.http.post<any>(environment.adminAddemp,body).subscribe(data=>{
     })
 
   }
@@ -69,7 +70,7 @@ getDetails:any="";
     this.addForm.controls['mail'].setValue(item.mail);
     this.addForm.controls['mobile'].setValue(item.mobile);
     this.addForm.controls['salary'].setValue(item.salary);
-    this.http.patch<any>("http://localhost:3000/addEmp/"+item.id,this.addForm.value).subscribe(data=>{
+    this.http.patch<any>(environment.adminAddemp+item.id,this.addForm.value).subscribe(data=>{
       alert("patch")
 
     })
@@ -79,7 +80,7 @@ getDetails:any="";
 //     alert("Employee Deleted");
 //   })
 delEmp(item:any){
-  this.http.delete("http://localhost:3000/addEmp/"+item).subscribe(data=>{
+  this.http.delete(environment.adminAddemp+item).subscribe(data=>{
 alert("Deleted");
 this.ngOnInit();
   })

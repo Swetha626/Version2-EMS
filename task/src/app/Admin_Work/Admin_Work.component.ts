@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { WorkFormComponent } from '../work-form/work-form.component';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-Admin_Work',
@@ -17,12 +18,12 @@ openForm(){
   this.dia.open(WorkFormComponent);
 }
   ngOnInit() {
-    this.http.get<any>("http://localhost:3000/WorkForm").subscribe(value=>{
+    this.http.get<any>(environment.empWorkform).subscribe(value=>{
       this.getWork1=value;
   });
-  this.http.get<any>("http://localhost:3000/EmpStatus").subscribe(data=>{
-    this.getWork2=data;
-  })
+  // this.http.get<any>("http://localhost:3000/EmpStatus").subscribe(data=>{
+  //   this.getWork2=data;
+  // })
   }
 editTask(item:any){
   this.dia.open(WorkFormComponent),{

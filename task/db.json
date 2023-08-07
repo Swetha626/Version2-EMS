@@ -12,7 +12,15 @@
     {
       "userId": "Swetha Suresh",
       "password": "Swetha@123",
-      "userName": "Swetha"
+      "userName": "Swetha",
+      "profile": "../../assets/Images/Swetha.png",
+      "DOB": "Aug 02"
+    },
+    {
+      "userId": "Shreemathi",
+      "password": "Shree@321",
+      "userName": "Shreemathi",
+      "profile": "../../assets/Images/Shree.jpg"
     }
   ],
   "adminLogin": [
@@ -27,24 +35,23 @@
       "tlname": "Naveen",
       "deptname": "Testing",
       "mobile": "9842413031",
-      "leaveDate": "2023-07-07",
-      "returnDate": "2023-07-10",
-      "reason": "Sick",
+      "leaveDate": "2023-08-07",
+      "returnDate": "2023-08-08",
+      "reason": "Doctor Appointment",
       "status": "",
       "id": 1,
       "Status": "Leave Approved"
     },
     {
-      "username": "Swetha",
-      "tlname": "snigdha ",
+      "username": "Shreemathi",
+      "tlname": "Snigdha ",
       "deptname": "Developer",
-      "mobile": "9842413031",
-      "leaveDate": "2023-07-19",
-      "returnDate": "2023-07-21",
+      "mobile": "9344800721",
+      "leaveDate": "2023-08-15",
+      "returnDate": "2023-08-17",
       "reason": "Function",
       "status": "",
-      "id": 2,
-      "Status": "Leave Cancelled"
+      "id": 2
     }
   ],
   "WorkForm": [
@@ -54,8 +61,14 @@
       "time": "12hr",
       "id": 1,
       "status": "In-Progress",
-      "totalTime": "8hr",
-      "text": "Going to complete"
+      "totalTime": "10hr",
+      "text": "dd"
+    },
+    {
+      "taskname": "Login Validation",
+      "owner": "Shreemathi ",
+      "time": "15hr",
+      "id": 2
     }
   ],
   "EmpStatus": [],
@@ -64,27 +77,60 @@
       "username": "Swetha",
       "tlname": "Naveen",
       "dept": "Testing",
-      "leave": "2023-07-07",
-      "return": "2023-07-10",
+      "leave": "2023-08-07",
+      "return": "2023-08-08",
       "Status": "Leave Approved",
       "id": 1
     },
     {
-      "username": "Swetha",
-      "tlname": "snigdha ",
+      "username": "Shreemathi",
+      "tlname": "Snigdha ",
       "dept": "Developer",
-      "leave": "2023-07-19",
-      "return": "2023-07-21",
+      "leave": "2023-08-15",
+      "return": "2023-08-17",
       "Status": "Leave Cancelled",
       "id": 2
+    },
+    {
+      "username": "Swetha",
+      "tlname": "Naveen",
+      "dept": "Testing",
+      "leave": "2023-08-07",
+      "return": "2023-08-08",
+      "Status": "Leave Approved",
+      "id": 3
+    },
+    {
+      "username": "Swetha",
+      "tlname": "Naveen",
+      "dept": "Testing",
+      "leave": "2023-08-07",
+      "return": "2023-08-08",
+      "Status": "Leave Cancelled",
+      "id": 4
+    },
+    {
+      "username": "Swetha",
+      "tlname": "Naveen",
+      "dept": "Testing",
+      "leave": "2023-08-07",
+      "return": "2023-08-08",
+      "Status": "Leave Approved",
+      "id": 5
     }
   ],
   "Attendance": [
     {
-      "username": "Swetha",
-      "date": "7/10/2023",
-      "status": "Work From Home",
+      "username": "Shreemathi",
+      "date": "8/2/2023",
+      "status": "Leave",
       "id": 1
+    },
+    {
+      "username": "Swetha",
+      "date": "8/2/2023",
+      "status": "Work From Home",
+      "id": 2
     }
   ]
 }

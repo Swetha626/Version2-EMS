@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, PatternValidator } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { Observable, map, subscribeOn } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-Emp_Attendance',
   templateUrl: './Emp_Attendance.component.html',
@@ -10,6 +12,7 @@ import { DatePipe } from '@angular/common';
 export class Emp_AttendanceComponent implements OnInit {
   present!:boolean;
   excused!:boolean;
+  getAttendance:any='';
   today=new Date().toLocaleDateString();
   constructor(private fb:FormBuilder,private http:HttpClient) {setInterval(()=>{
     var data=new Date();
@@ -46,7 +49,8 @@ if(hour==9 && min>=46 && min<=59 && time=='AM'){
 loginID:any;
 currentDate!: Date;
 // currentDay!:string |null;
-
+check:boolean=false; //for loop
+todayStatus:any="";
   ngOnInit() {
 
 
@@ -56,15 +60,39 @@ currentDate!: Date;
     }
     this.currentDate = new Date();
     // this.currentDay = this.datePipe.transform(this.currentDate, 'EEEE');
-    this.http.get<any>("http://localhost:3000/Attendance").subscribe(data=>{
-      const status=data.find((p:any)=>{
-        return p.username===this.loginID.userName
-      });
-      if(status){
-        this.getAttendance=status;
+   this.search().subscribe(data=>{
+    this.getAttendance=data;
+    for(let index=0; this.getAttendance.length;index++){
+      if(this.getAttendance[index].date===this.today)
+      {
+        this.check=true;
       }
-    })
+
+
+     }
+   })
+this.http.get<any>(environment.empAttendance).subscribe(data=>{
+  var details=data.find((item:any)=>{
+    return item.username===this.loginID.userName && item.date===this.today
+  })
+  if(details){
+    this.todayStatus=details;
+
   }
+})
+  }
+
+  search(): Observable<any> {
+    return this.http.get<any>(environment.empAttendance).pipe(
+      map((data) => {
+        return data.filter(
+          (item:any) =>
+            item.username===this.loginID.userName
+        );
+      })
+    );
+  }
+
 db(){
   var date=new Date().toLocaleDateString();
   var day=new Date().getDay();
@@ -73,7 +101,7 @@ db(){
   "date":date,
   "status":this.attendanceForm.value.post
 }
-this.http.post<any>("http://localhost:3000/Attendance",body).subscribe(data=>{
+this.http.post<any>(environment.empAttendance,body).subscribe(data=>{
 
   })
 }
@@ -88,6 +116,6 @@ show:boolean=false;
 view(){
   this.show=true;
   }
-  getAttendance:any='';
+
 
 }

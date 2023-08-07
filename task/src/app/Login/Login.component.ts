@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, PatternValidator} from '@angular/forms';
 import { Router } from '@angular/router';
 import { SessionService } from '../Session.service';
+import { environment } from 'src/environments/environment';
+
 
 
 @Component({
@@ -26,7 +28,7 @@ submit()
 
 admin()
 {
-  this.http.get<any>("http://localhost:3000/adminLogin").subscribe(res=>{
+  this.http.get<any>(environment.adminLogin).subscribe(res=>{
     const admin=res.find((a:any)=>{
       return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
     });
@@ -40,7 +42,7 @@ admin()
 emp()
 
   {
-    this.http.get<any>("http://localhost:3000/empLogin").subscribe(res=>{
+    this.http.get<any>(environment.empLogin).subscribe(res=>{
         const users=res.find((a:any)=>{
           return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
         });

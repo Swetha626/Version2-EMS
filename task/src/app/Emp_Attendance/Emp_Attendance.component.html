@@ -12,9 +12,9 @@
       <td>Status</td>
   </tr>
   <tr id="row" >
-   <td>{{getAttendance.username}}</td>
-   <td>{{getAttendance.date| date:'EEEE, MMMM d, y'}}</td>
-   <td>{{getAttendance.status}}</td>
+   <td>{{todayStatus.username}}</td>
+   <td>{{todayStatus.date| date:'EEEE, MMMM d, y'}}</td>
+   <td>{{todayStatus.status}}</td>
   </tr>
 
 </table>
@@ -38,7 +38,7 @@
             <br>
         </td>
         <td>
-          <button type="submit" [disabled]="attendanceForm.invalid" [hidden]="getAttendance.date==today" (click)="sub()">Submit</button>
+          <button type="submit" [disabled]="attendanceForm.invalid" [hidden]="check" (click)="sub()">Submit</button>
         </td>
 
     </tr>

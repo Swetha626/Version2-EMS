@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-Admin_leave',
   templateUrl: './Admin_leave.component.html',
@@ -10,7 +11,7 @@ export class Admin_leaveComponent implements OnInit {
   constructor(private http:HttpClient) { }
 getLeave:any="";
   ngOnInit() {
-    this.http.get<any>("http://localhost:3000/leaveForm").subscribe(value=>{
+    this.http.get<any>(environment.empLeave).subscribe(value=>{
       this.getLeave=value;
     });
   }
@@ -27,15 +28,15 @@ getLeave:any="";
     var body2={
       "Status":"Leave Approved"
     }
-    this.http.get<any>("http://localhost:3000/leaveForm").subscribe(data1=>{
+    this.http.get<any>(environment.empLeave).subscribe(data1=>{
       const status=data1.find((a:any)=>{
         return a.username===item.username
       })
       if(status){
-        this.http.patch<any>("http://localhost:3000/leaveForm/"+status.id,body2).subscribe(()=>{
+        this.http.patch<any>(environment.empLeave+'/'+status.id,body2).subscribe(()=>{
           alert("patched")
         })
-        this.http.post<any>("http://localhost:3000/LeaveStatus",body).subscribe(data=>{
+        this.http.post<any>(environment.empLeavestatus,body).subscribe(data=>{
           alert("approved");
           this.ngOnInit();
 
@@ -58,15 +59,15 @@ getLeave:any="";
     var body2={
       "Status":"Leave Cancelled"
     }
-    this.http.get<any>("http://localhost:3000/leaveForm").subscribe(data1=>{
+    this.http.get<any>(environment.empLeave).subscribe(data1=>{
       const status=data1.find((a:any)=>{
         return a.username===item.username && a.leaveDate===item.leaveDate
       })
       if(status){
-        this.http.patch<any>("http://localhost:3000/leaveForm/"+status.id,body2).subscribe(()=>{
-          alert("patched")
+        this.http.patch<any>(environment.empLeave+'/'+status.id,body2).subscribe(()=>{
+
         })
-        this.http.post<any>("http://localhost:3000/LeaveStatus",body).subscribe(data=>{
+        this.http.post<any>(environment.empLeavestatus,body).subscribe(data=>{
           alert("cancelled");
           this.ngOnInit();
 
