@@ -15,5 +15,6 @@ export const environment = {
   pranavImg:"../../assets/Images/Pranav.jpg",
   saruImg:"../../assets/Images/Saru.jpg",
   shreeImg:"../../assets/Images/Shree.jpg",
-  swethaImg:"../../assets/Images/Swetha.png"
+  swethaImg:"../../assets/Images/Swetha.png",
+  homepage:"../../assets/Images/crowd.jpg"
 };

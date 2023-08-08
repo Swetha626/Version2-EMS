@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/Home.component';
 import { AboutComponent } from './About/About.component';
 import { CultureComponent } from './Culture/Culture.component';
-import { OpeningsComponent } from './Openings/Openings.component';
 import { LoginComponent } from './Login/Login.component';
 import { Service_PageComponent } from './Service_Page/Service_Page.component';
 import { HeaderComponent } from './Header/Header.component';
@@ -29,7 +28,6 @@ import { Admin_leaveComponent } from './Admin_leave/Admin_leave.component';
 import { Admin_DetailsComponent } from './Admin_Details/Admin_Details.component';
 import { Admin_AttendanceComponent } from './Admin_Attendance/Admin_Attendance.component';
 import { Admin_WorkComponent } from './Admin_Work/Admin_Work.component';
-import { RegisterComponent } from './Register/Register.component';
 import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
 import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
@@ -48,7 +46,6 @@ import { DeactivateGuard } from './deactivate.guard';
       HomeComponent,
       AboutComponent,
       CultureComponent,
-      OpeningsComponent,
       LoginComponent,
       Service_PageComponent,
       HeaderComponent,
@@ -63,7 +60,6 @@ import { DeactivateGuard } from './deactivate.guard';
       Admin_DetailsComponent,
       Admin_AttendanceComponent,
       Admin_WorkComponent,
-      RegisterComponent,
       Emp_LeaveComponent,
       Emp_WorkStatusComponent,
       Admin_NotificationComponent,
