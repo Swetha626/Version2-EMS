@@ -33,7 +33,7 @@
             <li *ngIf="present"> <input  formControlName="post" name="post" id="post" type="radio" value="Present">Present</li>
             <li *ngIf="excused"> <input  formControlName="post" name="post" id="post"  type="radio" value="Excused">Excused</li>
             <li> <input  formControlName="post" name="post" id="post"  type="radio" value="Leave">Leave</li>
-            <li> <input  formControlName="post" name="post" id="post"  type="radio" value="Work From Home">Work From Home</li>
+            <li *ngIf="wfh">  <input  formControlName="post" name="post" id="post"  type="radio" value="Work From Home">Work From Home</li>
           </ul>
             <br>
         </td>

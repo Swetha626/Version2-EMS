@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 export class Emp_AttendanceComponent implements OnInit {
   present!:boolean;
   excused!:boolean;
+  wfh!:boolean;
   getAttendance:any='';
   today=new Date().toLocaleDateString();
   constructor(private fb:FormBuilder,private http:HttpClient) {setInterval(()=>{
@@ -38,6 +39,9 @@ this.present=true;
 if(hour==9 && min>=46 && min<=59 && time=='AM'){
 
   this.excused=true;
+}
+if(hour==10 && min>=1 && min<=30 && time=='AM'){
+  this.wfh=true;
 }
   })}
   attendanceForm=this.fb.group({

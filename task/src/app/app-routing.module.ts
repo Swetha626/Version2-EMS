@@ -15,7 +15,6 @@ import { RegisterComponent } from './Register/Register.component';
 import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
 import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
-import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 import { Admin_WorkComponent } from './Admin_Work/Admin_Work.component';
 import { Admin_DashboardComponent } from './Admin_Dashboard/Admin_Dashboard.component';
 import { Admin_leaveComponent } from './Admin_leave/Admin_leave.component';
@@ -86,10 +85,7 @@ const routes: Routes = [
     component:Emp_WorkStatusComponent
   },
 
-  {
-    path:"Emp_cPass",
-    component:Emp_cPassComponent
-  },
+ 
   // {
   //   path:"Admin-Page",
   //   component:Admin_HomeComponent

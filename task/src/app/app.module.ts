@@ -33,11 +33,9 @@ import { RegisterComponent } from './Register/Register.component';
 import { Emp_LeaveComponent } from './Emp_Leave/Emp_Leave.component';
 import { Emp_WorkStatusComponent } from './Emp_WorkStatus/Emp_WorkStatus.component';
 import { Admin_NotificationComponent } from './Admin_Notification/Admin_Notification.component';
-import { Emp_cPassComponent } from './Emp_cPass/Emp_cPass.component';
 import { Emp_HeaderComponent } from './Emp_Header/Emp_Header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorkFormComponent } from './work-form/work-form.component';
-import { AttendanceFormComponent } from './attendanceForm/attendanceForm.component';
 import { DeactivateGuard } from './deactivate.guard';
 
 
@@ -69,10 +67,9 @@ import { DeactivateGuard } from './deactivate.guard';
       Emp_LeaveComponent,
       Emp_WorkStatusComponent,
       Admin_NotificationComponent,
-      Emp_cPassComponent,
       Emp_HeaderComponent,
       WorkFormComponent,
-      AttendanceFormComponent
+
    ],
   imports: [
     BrowserModule,

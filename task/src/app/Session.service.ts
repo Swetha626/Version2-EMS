@@ -7,5 +7,4 @@ export class SessionService {
 
 constructor() { }
 nameID:any;
-
 }

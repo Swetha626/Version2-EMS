@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./Login.component.css']
 })
 export class LoginComponent{
-
+image:any=environment;
   constructor(private fb:FormBuilder,private http:HttpClient, private router:Router, private service:SessionService) { }
   loginForm=this.fb.group({
     username:[,[Validators.required,Validators.minLength(3)]],

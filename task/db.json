@@ -132,5 +132,10 @@
       "status": "Work From Home",
       "id": 2
     }
+  ],
+  "HomePage":[
+    {
+      "logo":"../../assets/Images/Shree.jpg"
+    }
   ]
 }
