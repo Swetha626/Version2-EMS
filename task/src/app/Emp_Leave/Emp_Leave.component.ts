@@ -81,8 +81,6 @@ db(){
     status:''
   }
     this.http.post<any>(environment.empLeave,body).subscribe(data=>{
-
-
 })
 
   }

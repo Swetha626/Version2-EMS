@@ -14,7 +14,7 @@
       "password": "Swetha@123",
       "userName": "Swetha",
       "profile": "../../assets/Images/Swetha.png",
-      "DOB": "Aug 02"
+      "DOB": "Aug 12"
     },
     {
       "userId": "Shreemathi",
@@ -60,9 +60,9 @@
       "owner": "Swetha",
       "time": "12hr",
       "id": 1,
-      "status": "In-Progress",
-      "totalTime": "10hr",
-      "text": "dd"
+      "status": "Completed",
+      "totalTime": "12hr",
+      "text": "Module Completed"
     },
     {
       "taskname": "Login Validation",
@@ -132,10 +132,11 @@
       "status": "Work From Home",
       "id": 2
     }
+
   ],
-  "HomePage":[
+  "HomePage": [
     {
-      "logo":"../../assets/Images/Shree.jpg"
+      "logo": "../../assets/Images/Shree.jpg"
     }
   ]
 }

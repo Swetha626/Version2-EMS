@@ -29,8 +29,8 @@ submit()
 admin()
 {
   this.http.get<any>(environment.adminLogin).subscribe(res=>{
-    const admin=res.find((a:any)=>{
-      return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
+    const admin=res.find((admin:any)=>{
+      return admin.userId===this.loginForm.value.username && admin.password===this.loginForm.value.password
     });
     if(admin){
       alert("Login Successfully");
@@ -43,8 +43,8 @@ emp()
 
   {
     this.http.get<any>(environment.empLogin).subscribe(res=>{
-        const users=res.find((a:any)=>{
-          return a.userId===this.loginForm.value.username && a.password===this.loginForm.value.password
+        const users=res.find((emp:any)=>{
+          return emp.userId===this.loginForm.value.username && emp.password===this.loginForm.value.password
         });
         if(users){
           alert("Login Successfully");

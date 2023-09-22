@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+
 import { AboutComponent } from './About/About.component';
 import { CultureComponent } from './Culture/Culture.component';
 import { ForgotPassComponent } from './ForgotPass/ForgotPass.component';
@@ -80,19 +82,11 @@ const routes: Routes = [
     component:Emp_WorkStatusComponent
   },
 
-
-  // {
-  //   path:"Admin-Page",
-  //   component:Admin_HomeComponent
-  // },
   {
     path:"Admin_Home",
     component:Admin_HomeComponent
   },
-  // {
-  //   path:"notification",
-  //   component:Admin_NotificationComponent
-  // },
+
   {
     path:"Admin_Notification",
     component:Admin_NotificationComponent

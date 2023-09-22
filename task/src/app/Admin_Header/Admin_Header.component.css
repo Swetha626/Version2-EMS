@@ -12,7 +12,8 @@
 }
 .picture img{
   display: block;
-  width: 100px; height: 100px;
+  width: 100px;
+   height: 100px;
   object-fit: cover;
   border:4px solid #726a95;
   border-radius: 50%;
@@ -30,7 +31,7 @@ h2{
   position:fixed;
   left: 0;
   top: 0;
-  margin-left: 0%;
+  /* margin-left: 0%; */
   width: 17%;
   height: 100%;
   background-image: linear-gradient(to bottom,#537188,#41644A,#537188);
@@ -44,6 +45,7 @@ a{
 
   list-style: none;
   padding: 10px;
+
 }
 .sidebar li a:hover
 {

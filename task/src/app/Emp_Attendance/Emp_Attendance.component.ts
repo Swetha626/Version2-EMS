@@ -30,9 +30,6 @@ export class Emp_AttendanceComponent implements OnInit {
     if(hour>12){
       hour=hour-12;
     }
-// if(week==6 || week==7){
-//   this.post=false;
-// }
 if(hour==9 && min>=30 && min<=45 && time=='AM'){
 this.present=true;
 }
@@ -52,18 +49,18 @@ if(hour==10 && min>=1 && min<=30 && time=='AM'){
 
 loginID:any;
 currentDate!: Date;
-// currentDay!:string |null;
 check:boolean=false; //for loop
 todayStatus:any="";
+
   ngOnInit() {
 
 
-    const sessionUser = sessionStorage.getItem('nameID'); // <-- retrieve user details from session storage
+    const sessionUser = sessionStorage.getItem('nameID');
     if (sessionUser) {
-      this.loginID = JSON.parse(sessionUser);  //<-- Geting ID from session strongs (as viewable obj)
+      this.loginID = JSON.parse(sessionUser);
     }
     this.currentDate = new Date();
-    // this.currentDay = this.datePipe.transform(this.currentDate, 'EEEE');
+
    this.search().subscribe(data=>{
     this.getAttendance=data;
     for(let index=0; this.getAttendance.length;index++){
@@ -98,11 +95,11 @@ this.http.get<any>(environment.empAttendance).subscribe(data=>{
   }
 
 db(){
-  var date=new Date().toLocaleDateString();
-  var day=new Date().getDay();
+  // var date=new Date().toLocaleDateString();
+  // var day=new Date().getDay();
    var body={
   "username":this.loginID.userName,
-  "date":date,
+  "date":'',
   "status":this.attendanceForm.value.post
 }
 this.http.post<any>(environment.empAttendance,body).subscribe(data=>{
@@ -120,6 +117,5 @@ show:boolean=false;
 view(){
   this.show=true;
   }
-
 
 }
